@@ -10,11 +10,13 @@ import { Link } from "react-router-dom";
 const SideBar = () => {
   const navigate = useNavigate();
 
-  return (<div className="container-fluid d-none d-md-block d-lg-block"  >
-  <span className="e2215_782 pe-none" aria-disabled="true">
+  return (<div className="container-fluid d-none d-md-block d-lg-block left-bar"  >
+    <div class="vl"></div>
+  <div className="e2215_782 pe-none" aria-disabled="true">
     {" "}
     beglaubigt.de
-  </span>
+  </div>
+  
   <span className="e2215_783 pe-none" aria-disabled="true">
     Allgemeines
   </span>

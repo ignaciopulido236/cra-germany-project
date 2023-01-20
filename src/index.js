@@ -14,7 +14,7 @@ import SideBar from "./components/SideBar";
 import PhoneInfo from './components/PhoneInfo';
 import CreateRecord from "./components/CreateRecord";
 import "bootstrap/dist/css//bootstrap.min.css";
-
+import Funnel001 from './funnel/Funnel001';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

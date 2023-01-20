@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import * as CompanyServer from "./appserver";
-
+import Funnel001 from "../funnel/Funnel001";
 const CompanyForm = () => {
 
     const navigate = useNavigate();
@@ -81,8 +81,9 @@ const CompanyForm = () => {
         // eslint-disable-next-line
     }, []);
 
-    return (
+    return (        
         <div className="col-md-3 mx-auto">
+            
             <h2 className="mb-3 text-center">Company</h2>
             <form id="myForm" onSubmit={handleSubmit}>
                 <div className="mb-3">

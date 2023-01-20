@@ -5,6 +5,8 @@
 		/*grid-template-rows: 150vh;	*/
 	}
 }
+
+
 .phone-number{	
 	display: grid;
 	grid-template-rows: 5vh;
@@ -26,7 +28,12 @@
 
 }
 
-
+.vl {
+    border-left: 1.5px solid rgb(78, 74, 74);
+    height: 100vh;
+    position: fixed;
+    left: 265px;
+  }
 
 .e2215_778 { 
 	overflow:hidden;
