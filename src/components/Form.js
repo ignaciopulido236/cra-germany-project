@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import * as CompanyServer from "./appserver";
 import Funnel001 from "../funnel/Funnel001";
+import Lateral001 from "../funnel/Lateral001";
 const CompanyForm = () => {
 
     const navigate = useNavigate();
@@ -27,7 +28,7 @@ const CompanyForm = () => {
                 console.log(res.message)
                 const data = await res;
                 console.log(data.id);
-                params.id=data.id;
+                params.id = data.id;
                 if (data.message === "Success") {
                     setCompany(initialState);
                 }
@@ -80,37 +81,27 @@ const CompanyForm = () => {
         }
         // eslint-disable-next-line
     }, []);
+    let a = 1;
 
-    return (        
-        <div className="col-md-3 mx-auto">
-            
-            <h2 className="mb-3 text-center">Company</h2>
-            <form id="myForm" onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label className="form-label">Name</label>
-                    <input type="text" name="name" value={company.name} onChange={handleInputChange} className="form-control" minLength="2" maxLength="50" autoFocus required />
+    return (
+        <div className="container-fluid"   >
+            <div className="row">
+                <div className="col-3">
+                    
                 </div>
-                <div className="mb-3">
-                    <label className="form-label">Foundation</label>
-                    <input type="number" name="foundation" value={company.foundation} onChange={handleInputChange} className="form-control" min="1900" max="2020" required />
+                <div className="FormContent col-5 text-center">
+                  
+                    <Funnel001/>
+                 
                 </div>
-                <div className="mb-3">
-                    <label className="form-label">Website</label>
-                    <input type="url" name="website" value={company.website} onChange={handleInputChange} className="form-control" maxLength="100" required />
+                <div className="col-4">
+                <Lateral001/>
                 </div>
-                <div className="d-grid gap-2">
-                    {params.id ? (
-                        <button type="submit" className="btn btn-block btn-primary">
-                            Update
-                        </button>
-                    ) : (
-                        <button type="submit" className="btn btn-block btn-success">
-                            Register
-                        </button>
-                    )}
-                </div>
-            </form>
+            </div>
+
         </div>
+
+
     );
 };
 

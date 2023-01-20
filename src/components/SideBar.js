@@ -10,45 +10,47 @@ import { Link } from "react-router-dom";
 const SideBar = () => {
   const navigate = useNavigate();
 
-  return (<div className="container-fluid d-none d-md-block d-lg-block left-bar"  >
-    <div class="vl"></div>
-  <div className="e2215_782 pe-none" aria-disabled="true">
-    {" "}
-    beglaubigt.de
-  </div>
-  
-  <span className="e2215_783 pe-none" aria-disabled="true">
-    Allgemeines
-  </span>
-  <span className="e2215_784 pe-none" aria-disabled="true">
-    Gesellschafter
-  </span>
-  <span className="e2215_785 pe-none" aria-disabled="true">
-    Kapital & Einlagen
-  </span>
-  <span className="e2215_786 pe-none" aria-disabled="true">
-    Sonstige Regelungen
-  </span>
+  return (
+    <div className="container-fluid d-none d-md-block d-lg-block left-bar">
+      <div class="vl"></div>
+      <div className="e2215_782 pe-none" aria-disabled="true">
+        {" "}
+        beglaubigt.de
+      </div>
 
-  <div>
-    <a
-      className="e2215_810 text-decoration-none"
-      href="https://beglaubigt.de/datenschutz"
-    >
-      Datenschutzbedingungen
-    </a>
+      <span className="e2215_783 pe-none" aria-disabled="true">
+        Allgemeines
+      </span>
+      <span className="e2215_784 pe-none" aria-disabled="true">
+        Gesellschafter
+      </span>
+      <span className="e2215_785 pe-none" aria-disabled="true">
+        Kapital & Einlagen
+      </span>
+      <span className="e2215_786 pe-none" aria-disabled="true">
+        Sonstige Regelungen
+      </span>
 
-    <a
-      className="e2215_811 text-decoration-none"
-      href="https://beglaubigt.de/impressum"
-    >
-      Impressum
-    </a>
-    <span className="e2215_812" aria-disabled="true">
-      beglaubigt.com Group © 2022
-    </span>
-  </div>
-</div>);
+      <div>
+        <a
+          className="e2215_810 text-decoration-none"
+          href="https://beglaubigt.de/datenschutz"
+        >
+          Datenschutzbedingungen
+        </a>
+
+        <a
+          className="e2215_811 text-decoration-none"
+          href="https://beglaubigt.de/impressum"
+        >
+          Impressum
+        </a>
+        <span className="e2215_812" aria-disabled="true">
+          beglaubigt.com Group © 2022
+        </span>
+      </div>
+    </div>
+  );
 };
 
 export default SideBar;
