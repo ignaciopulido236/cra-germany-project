@@ -11,44 +11,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="main-grid container-fluid" >
-      <div className="container-fluid d-none d-md-block d-lg-block"  >
-        <span className="e2215_782 pe-none" aria-disabled="true">
-          {" "}
-          beglaubigt.de
-        </span>
-        <span className="e2215_783 pe-none" aria-disabled="true">
-          Allgemeines
-        </span>
-        <span className="e2215_784 pe-none" aria-disabled="true">
-          Gesellschafter
-        </span>
-        <span className="e2215_785 pe-none" aria-disabled="true">
-          Kapital & Einlagen
-        </span>
-        <span className="e2215_786 pe-none" aria-disabled="true">
-          Sonstige Regelungen
-        </span>
-
-        <div>
-          <a
-            className="e2215_810 text-decoration-none"
-            href="https://beglaubigt.de/datenschutz"
-          >
-            Datenschutzbedingungen
-          </a>
-
-          <a
-            className="e2215_811 text-decoration-none"
-            href="https://beglaubigt.de/impressum"
-          >
-            Impressum
-          </a>
-          <span className="e2215_812" aria-disabled="true">
-            beglaubigt.com Group © 2022
-          </span>
-        </div>
-      </div>
+    <div className="main-grid container-fluid" >      
       <div>
         <div className="e2215_815"></div>
         <div className="e2215_816">
@@ -64,13 +27,7 @@ const Home = () => {
           STARTEN
         </Link>
       </div>
-      <div className="phone-number">
-        <img src={stars} alt="Stars Logo" style={{ width: "100%" }} />
-        <div className="phone_logo ">
-          <img src={phone} alt="Phone Logo" style={{ width: "100%" }} />
-        </div>
-        <div>(+43) 030 3292 2323</div>
-      </div>
+      
     </div>
   );
 };

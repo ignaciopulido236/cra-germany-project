@@ -10,7 +10,8 @@ import CompanyList from "./components/CompanyList";
 import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import Home from "./components/Home";
-
+import SideBar from "./components/SideBar";
+import PhoneInfo from './components/PhoneInfo';
 import CreateRecord from "./components/CreateRecord";
 import "bootstrap/dist/css//bootstrap.min.css";
 
@@ -19,7 +20,10 @@ import "bootstrap/dist/css//bootstrap.min.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-      <Navbar />      
+      <Navbar /> 
+      <SideBar/>
+      <PhoneInfo/>
+       
       <Routes>
       <Route path="/" element={<Home />}></Route>
         <Route path="/Form" element={<Form />}></Route>
@@ -27,6 +31,7 @@ root.render(
         <Route path="/new" element={<CreateRecord />}></Route>
       </Routes>
     </BrowserRouter>
+    
 );
 
 // If you want to start measuring performance in your app, pass a function
