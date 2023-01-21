@@ -41,6 +41,7 @@ const CompanyForm = () => {
             console.log(error);
         }
     }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -70,32 +71,41 @@ const CompanyForm = () => {
             console.log(error);
         }
     };
+    const [Stage, setStage] = useState(1);
+
+
 
     useEffect(() => {
         if (params.id) {
             getCompany(params.id);
         } else {
-            console.log("here")
             console.log(params.id)
             /*NewRecord()*/
         }
         // eslint-disable-next-line
-    }, []);
-    let a = 1;
+    }, [Stage]);
+    function padreAHijo()  {
+        console.log("Esta es la data del componente Padre al componente Hijo.");
+    };
 
     return (
         <div className="container-fluid"   >
             <div className="row">
                 <div className="col-3">
-                    
+
                 </div>
                 <div className="FormContent col-5 text-center">
-                  
-                    <Funnel001/>
-                 
+
+                    <Funnel001 cambiarMensaje={() => padreAHijo()} />
+
                 </div>
                 <div className="col-4">
-                <Lateral001/>
+                    <div id="stage_1">
+                        <Lateral001 />
+                    </div>
+                    <div id="stage_2">
+                        <p>hola</p>
+                    </div>
                 </div>
             </div>
 
