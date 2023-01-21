@@ -219,3 +219,52 @@
 	background-repeat:no-repeat;
 	background-size:cover;    
 }
+#form_select_stage_3{
+    left:385px;
+	top:338px;
+    position:absolute;
+    width: 537px;
+    height: 66;
+    padding: 15px;
+    font-size: 15px;
+}
+.e2215_717_Wohnort { 
+	color:rgba(12.085939273238182, 34.87655773758888, 69.0625025331974, 0.4099999964237213);
+	width:36px;
+	height:21px;
+	position:absolute;
+	left:410px;
+	top:500px;
+	font-family:Montserrat;
+	text-align:left;
+	font-size:14px;
+	letter-spacing:0;
+}
+#funnel_Wohnort {  
+    width:537px;
+    height:66px;
+	position:absolute;
+	left:397px;
+	top: 495px;;
+
+}
+#funnel_Geburtsdatum {  
+    width:537px;
+    height:66px;
+	position:absolute;
+	left:397px;
+	top: 416px;;
+
+}
+.e2215_717_Geburtsdatum  { 
+	color:rgba(12.085939273238182, 34.87655773758888, 69.0625025331974, 0.4099999964237213);
+	width:36px;
+	height:21px;
+	position:absolute;
+	left:410px;
+	top:416px;
+	font-family:Montserrat;
+	text-align:left;
+	font-size:14px;
+	letter-spacing:0;
+}

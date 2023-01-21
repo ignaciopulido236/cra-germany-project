@@ -12,7 +12,7 @@ const Funnel002 = (props) => {
         e.preventDefault();
         const funnel_name = document.getElementById("funnel_name");
         const funnel_Sitz = document.getElementById("funnel_Sitz");
-        cambiarMensaje()
+        cambiarMensaje(3)
 
         if (!funnel_name.value) {
             setShow(true);

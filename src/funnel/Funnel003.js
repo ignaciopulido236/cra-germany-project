@@ -5,53 +5,40 @@ const Funnel001 = (props) => {
     const [show, setShow] = useState(false);
     const alert_funnel_001 = show ? "show" : "hide";
     const { cambiarMensaje } = props;
-    console.log(props)
-
+    console.log(props);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const funnel_name = document.getElementById("funnel_name");
         const funnel_Sitz = document.getElementById("funnel_Sitz");
-        cambiarMensaje(2)
+        cambiarMensaje(4);
+
         if (!funnel_name.value) {
             setShow(true);
-
         } else if (!funnel_Sitz.value) {
             setShow(true);
+
             funnel_Sitz.style.borderBlockColor = "Red";
         } else {
             setShow(false);
         }
-
     };
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <span className="e2215_677"> Name und Sitz der Gesellschaft </span>
+                <span className="e2215_677">Anzahl der Gesellschafter</span>
                 <span className="e2215_678">
-                    Füllen Sie den Name der Gesellschaft und den Sitz in den
-                    untenstehenden Feldern ein.
+                    Wählen Sie aus, wie viele Gesellschafter die Gesellschaft haben wird.
                 </span>
                 <div className="e2215_687"></div>
                 <span className="e2215_686">Zurück</span>
-                <div className="container-fluid">
-                    <input
-                        className="form-control"
-                        placeholder="Name"
-                        label="Email"
-                        type="text"
-                        id="funnel_name"
-                    />
-                    <span class="e2215_715">Name *</span>
-                </div>
-                <input
-                    className="form-control"
-                    placeholder="Sitz"
-                    label="Email"
-                    type="text"
-                    id="funnel_Sitz"
-                />
-                <span class="e2215_717">Sitz *</span>
+                <select className="form-select" id="form_select_stage_3">
+                    <option value="grapefruit">2 Gesellschafter</option>
+                    <option value="lime">3 Gesellschafter</option>
+                    <option selected value="coconut">4 Gesellschafter</option>
+                    <option value="mango">5 Gesellschafter</option>
+                </select>
+
                 <button class="e2215_711" type="submit"></button>
                 <button class="e2215_712">WEITER</button>
                 <span class="e2215_713">Überspringen</span>
