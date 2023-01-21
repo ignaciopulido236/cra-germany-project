@@ -53,6 +53,16 @@
 	top:338px;
     
 }
+#funnel_Gegenstand {
+    text-align: justify;
+    width:537px;
+    height:158px;
+	position:absolute;
+	left:397px;
+	top:338px;
+    padding-top: 20px;
+    
+}
 .need-validation{
     border-color: rgb(95, 0, 0);
     border-width: 3px;
@@ -67,7 +77,7 @@
 }
 .e2215_715 { 
 	color:rgba(26.296868920326233, 92.27809399366379, 191.25, 1);
-	width:45px;
+	width:50px;
 	height:18px;
 	position:absolute;
 	left:410px;
@@ -77,6 +87,7 @@
 	font-size:12px;
 	letter-spacing:0;
 }
+
 .e2215_717 { 
 	color:rgba(12.085939273238182, 34.87655773758888, 69.0625025331974, 0.4099999964237213);
 	width:36px;

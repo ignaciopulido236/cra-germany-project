@@ -3,7 +3,11 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import * as CompanyServer from "./appserver";
 import Funnel001 from "../funnel/Funnel001";
+import Funnel002 from "../funnel/Funnel002";
+
 import Lateral001 from "../funnel/Lateral001";
+import Lateral002 from "../funnel/Lateral002";
+
 const CompanyForm = () => {
 
     const navigate = useNavigate();
@@ -71,7 +75,7 @@ const CompanyForm = () => {
             console.log(error);
         }
     };
-    const [Stage, setStage] = useState(1);
+    const [Stage, setStage] = useState(2);
 
 
 
@@ -82,10 +86,27 @@ const CompanyForm = () => {
             console.log(params.id)
             /*NewRecord()*/
         }
+        if (Stage == 2) {
+            const stage_1 = document.getElementById("stage_1");
+            const stage_2 = document.getElementById("stage_2");
+
+            const stage_one = document.getElementById("lateral_stage_1");
+            const stage_two = document.getElementById("lateral_stage_2");
+
+
+
+            stage_1.style.visibility = "hidden"
+            stage_one.style.visibility = "hidden"
+            stage_2.style.visibility = "visible"
+            stage_two.style.visibility = "visible"
+
+
+        }
         // eslint-disable-next-line
     }, [Stage]);
-    function padreAHijo()  {
-        console.log("Esta es la data del componente Padre al componente Hijo.");
+    function padreAHijo() {
+        setStage(2)
+
     };
 
     return (
@@ -95,17 +116,24 @@ const CompanyForm = () => {
 
                 </div>
                 <div className="FormContent col-5 text-center">
-
-                    <Funnel001 cambiarMensaje={() => padreAHijo()} />
+                    <div id="stage_1" >
+                        <Funnel001 cambiarMensaje={() => padreAHijo()} />
+                    </div>
+                    <div id="stage_2" style={{ visibility: "hidden" }}>
+                        <Funnel002 cambiarMensaje={() => padreAHijo()} />
+                    </div>
 
                 </div>
                 <div className="col-4">
-                    <div id="stage_1">
+                    <div id="lateral_stage_1">
                         <Lateral001 />
                     </div>
-                    <div id="stage_2">
-                        <p>hola</p>
+                    <div id="lateral_stage_2">
+                        <Lateral002 />
                     </div>
+
+
+
                 </div>
             </div>
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "./funnel.css";
-const Funnel001 = (props) => {
+const Funnel002 = (props) => {
     const [show, setShow] = useState(false);
     const alert_funnel_001 = show ? "show" : "hide";
     const { cambiarMensaje } = props;
@@ -30,31 +30,23 @@ const Funnel001 = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <span className="e2215_677"> Name und Sitz der Gesellschaft </span>
+                <span className="e2215_677"> Gegenstand der Gesellschaft </span>
                 <span className="e2215_678">
-                    Füllen Sie den Name der Gesellschaft und den Sitz in den
-                    untenstehenden Feldern ein.
+                Beschreiben Sie den Gegenstand der Gesellschaft, um das Ziel der Tätigkeit zu erläutern.
                 </span>
                 <div className="e2215_687"></div>
                 <span className="e2215_686">Zurück</span>
                 <div className="container-fluid">
-                    <input
-                        className="form-control"
-                        placeholder="Name"
+                    <textarea
+                        className="form-control"                    
                         label="Email"
                         type="text"
-                        id="funnel_name"
+                        id="funnel_Gegenstand"
                     />
-                    <span class="e2215_715">Name *</span>
+                    <span class="e2215_715">Gegenstand</span>
                 </div>
-                <input
-                    className="form-control"
-                    placeholder="Sitz"
-                    label="Email"
-                    type="text"
-                    id="funnel_Sitz"
-                />
-                <span class="e2215_717">Sitz *</span>
+              
+               
                 <button class="e2215_711" type="submit"></button>
                 <button class="e2215_712">WEITER</button>
                 <span class="e2215_713">Überspringen</span>
@@ -69,4 +61,4 @@ const Funnel001 = (props) => {
     );
 };
 
-export default Funnel001;
+export default Funnel002;

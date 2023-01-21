@@ -15,6 +15,8 @@ import PhoneInfo from './components/PhoneInfo';
 import CreateRecord from "./components/CreateRecord";
 import "bootstrap/dist/css//bootstrap.min.css";
 import Funnel001 from './funnel/Funnel001';
+import Funnel002 from './funnel/Funnel002';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
