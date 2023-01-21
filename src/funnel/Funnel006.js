@@ -24,41 +24,28 @@ const Funnel001 = (props) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <span className="e2215_677">Daten des ersten Gesellschafters</span>
+        <span className="e2215_677">
+          Anteil erster Gesellschafter</span>
         <span className="e2215_678">
-          Füllen Sie die legitimen Daten des ersten Gesellschafters vollständig
-          aus.
+          Bitte geben Sie den Anteil des ersten Gesellschafters am Gesellschaftskapital an.
         </span>
         <div className="e2215_687"></div>
         <span className="e2215_686">Zurück</span>
         <div className="container-fluid">
           <input
             className="form-control"
-            placeholder="Name"
+            placeholder="50"
             label="Email"
-            type="text"
+            min="0" max="100"
+
             id="funnel_name"
+            type="number"
           />
-          <span class="e2215_715">Name *</span>
+          <span class="e2215_715">Anteil *</span>
         </div>
-        <input
-          className="form-control"
-          placeholder="Geburtsdatum"
-          label="Email"
-          type="text"
-          id="funnel_Geburtsdatum"
-        />
-        <input
-          className="form-control"
-          placeholder="Wohnort"
-          label="Email"
-          type="text"
-          id="funnel_Wohnort"
-        />
-        <span class="e2215_717_Geburtsdatum">Geburtsdatum *</span>
+
         <button class="e2215_711" type="submit"></button>
 
-        <span class="e2215_717_Wohnort">Wohnort *</span>
         <button class="e2215_711" type="submit"></button>
 
         <button class="e2215_712">WEITER</button>

@@ -24,7 +24,7 @@ const Funnel001 = (props) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <span className="e2215_677">Daten des ersten Gesellschafters</span>
+        <span className="e2215_677">Glückwunsch, Dokument bereit.</span>
         <span className="e2215_678">
           Füllen Sie die legitimen Daten des ersten Gesellschafters vollständig
           aus.

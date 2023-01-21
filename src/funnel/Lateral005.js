@@ -5,9 +5,10 @@ class Lateral001 extends React.Component {
   render() {
     return (
       <div>
-        <div class="e2215_718"></div>
+        <div class="e2215_718_big"></div>
         <span class="e2215_721">
-        Bitte geben Sie den vollständigen Namen des Gesellschafters ein. "Erster Gesellschafter" meint hier nur der Erste, dessen Daten Sie eingeben. Es geht also nicht um die Stellung der Gesellschafter zueinander. Unter "Wohnort" ist nur der Ort und nicht die vollständige Adresse des Gesellschafters zu verstehen. Dementsprechend geben Sie etwa nur "Berlin" oder "München" ein.
+          Das Stammkapital einer UG (haftungsbeschränkt) muss mindestens EUR 1 und höchsten EUR 24.999 betragen. Eine als GmbH gegründete Gesellschaft ist immer dann eine Unternehmergesellschaft (haftungsbeschränkt), wenn ihr Stammkapital nicht die Mindestsumme, die zur Gründung einer GmbH nötig ist (EUR 25.000,00) erreicht. Im Gegenzug muss eine UG (haftungsbeschränkt) aus Teilen des Gewinns eine Rückstellung bilden und das Stammkapital "ansparen".
+
         </span>
         <span class="e2215_720 ">Erklärung</span>
         <div class="e2215_722"></div>

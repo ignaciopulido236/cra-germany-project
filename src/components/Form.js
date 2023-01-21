@@ -127,19 +127,19 @@ const CompanyForm = () => {
             <Funnel002 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
           <div id="stage_3" className="stages">
-            <Funnel003 cambiarMensaje={(stage_000) => padreAHijo()} />
+            <Funnel003 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
           <div id="stage_4" className="stages">
-            <Funnel004 cambiarMensaje={(stage_000) => padreAHijo()} />
+            <Funnel004 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
           <div id="stage_5" className="stages">
-            <Funnel005 cambiarMensaje={(stage_000) => padreAHijo()} />
+            <Funnel005 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
           <div id="stage_6" className="stages">
-            <Funnel006 cambiarMensaje={(stage_000) => padreAHijo()} />
+            <Funnel006 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
           <div id="stage_7" className="stages">
-            <Funnel007 cambiarMensaje={(stage_000) => padreAHijo()} />
+            <Funnel007 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
 
         </div>
