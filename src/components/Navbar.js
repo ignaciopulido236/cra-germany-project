@@ -22,14 +22,12 @@ const Navbar = () => {
         <Link className="navbar-brand" to="/" >
           Home
         </Link>
-        <Link className="navbar-brand" to="/Form">
-          Form
-        </Link>
+     
         <Link className="navbar-brand" to="/new">
-          New One
+          New Document
         </Link>
         <Link className="navbar-brand" to="/list">
-          List
+          Document List
         </Link>
       </div>
     </nav>

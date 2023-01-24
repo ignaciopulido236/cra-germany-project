@@ -1,0 +1,11 @@
+.make_transparent{
+    color: transparent;
+    display: none;
+}
+.make_bold{
+    font-size: 12px!important;
+}
+.just_blue{
+    font-weight: bold!important;  
+    color: #1A5CBF;
+}

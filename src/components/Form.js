@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { StageContext } from "../context/TaskContext";
 
 import * as CompanyServer from "./appserver";
 import Funnel001 from "../funnel/Funnel001";
@@ -22,8 +23,11 @@ import Lateral006 from "../funnel/Lateral006";
 
 import Funnel007 from "../funnel/Funnel007";
 import Lateral007 from "../funnel/Lateral007";
+let document_token = ""; //Global Variable
 
 const CompanyForm = () => {
+  const { globalState, setGlobalState } = useContext(StageContext);
+
   const navigate = useNavigate();
   const params = useParams();
 
@@ -34,8 +38,6 @@ const CompanyForm = () => {
   const [company, setCompany] = useState(initialState);
 
   const handleInputChange = (e) => {
-    // console.log(e.target.name);
-    // console.log(e.target.value);
     setCompany({ ...company, [e.target.name]: e.target.value });
   };
   async function NewRecord() {
@@ -60,6 +62,8 @@ const CompanyForm = () => {
   }
 
   const handleSubmit = async (e) => {
+    alert(e);
+    company.name = e;
     e.preventDefault();
     try {
       let res;
@@ -84,11 +88,12 @@ const CompanyForm = () => {
       const data = await res.json();
       const { name, foundation, website } = data.company;
       setCompany({ name, foundation, website });
+      document_token = data.company.description;
     } catch (error) {
       console.log(error);
     }
   };
-  const [Stage, setStage] = useState(5);
+  const [Stage, setStage] = useState(1);
 
   useEffect(() => {
     const stages = document.getElementsByClassName("stages");
@@ -106,22 +111,27 @@ const CompanyForm = () => {
     const lateral_stage_el = document.getElementById("lateral_stage_" + Stage);
     stage_el.style.visibility = "visible";
     lateral_stage_el.style.visibility = "visible";
+    
+
 
     // eslint-disable-next-line
-  }, [Stage]);
+  }, [Stage,globalState]);
   function padreAHijo(stage_000) {
-    console.log(stage_000)
+    console.log(stage_000);
     setStage(stage_000);
   }
 
   return (
     <div className="container-fluid">
-        <div>{Stage}</div>
+      <div>{Stage}</div>
       <div className="row">
         <div className="col-3"></div>
         <div className="FormContent col-5 text-center">
           <div id="stage_1" className="stages">
-            <Funnel001 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+            <Funnel001
+              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
+              Onsubmit={company}
+            />
           </div>
           <div id="stage_2" className="stages">
             <Funnel002 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
@@ -139,9 +149,11 @@ const CompanyForm = () => {
             <Funnel006 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
           <div id="stage_7" className="stages">
-            <Funnel007 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+            <Funnel007
+              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
+              name={document_token}
+            />
           </div>
-
         </div>
         <div className="col-4">
           <div id="lateral_stage_1" className="stages">

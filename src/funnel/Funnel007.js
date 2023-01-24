@@ -1,11 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 
 import "./funnel.css";
+import "./funnel_007.css";
+import Group50 from "./images/Group50.png"
+import { StageContext } from "../context/TaskContext";
+
+
 const Funnel001 = (props) => {
-  const [show, setShow] = useState(false);
-  const alert_funnel_001 = show ? "show" : "hide";
-  const { cambiarMensaje } = props;
-  console.log(props);
+
+  const link = 'start.beglaubigt.de/gesellschaftsvertrag-ug/' + props.name;
+  const { globalState, setGlobalState } = useContext(StageContext);
+
+
+  const handleClick = async () => {
+    try {
+      await navigator.clipboard.writeText(link);
+      console.log('Link copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy link: ', err);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,48 +35,41 @@ const Funnel001 = (props) => {
       setShow(false);
     }
   };
+
+  const [show, setShow] = useState(false);
+  const alert_funnel_001 = show ? "show" : "hide";
+  const { cambiarMensaje } = props;
+
+
+  const go_to_form = async (e, stage_number) => {
+    e.preventDefault();
+    cambiarMensaje(stage_number);
+    setGlobalState(2)
+  };
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <span className="e2215_677">Glückwunsch, Dokument bereit.</span>
         <span className="e2215_678">
-          Füllen Sie die legitimen Daten des ersten Gesellschafters vollständig
-          aus.
+          Sie können nun direkt das Dokument Online beglaubigen oder das Dokument herunterladen.
         </span>
         <div className="e2215_687"></div>
-        <span className="e2215_686">Zurück</span>
-        <div className="container-fluid">
-          <input
-            className="form-control"
-            placeholder="Name"
-            label="Email"
-            type="text"
-            id="funnel_name"
-          />
-          <span class="e2215_715">Name *</span>
-        </div>
-        <input
-          className="form-control"
-          placeholder="Geburtsdatum"
-          label="Email"
-          type="text"
-          id="funnel_Geburtsdatum"
-        />
-        <input
-          className="form-control"
-          placeholder="Wohnort"
-          label="Email"
-          type="text"
-          id="funnel_Wohnort"
-        />
-        <span class="e2215_717_Geburtsdatum">Geburtsdatum *</span>
-        <button class="e2215_711" type="submit"></button>
 
-        <span class="e2215_717_Wohnort">Wohnort *</span>
-        <button class="e2215_711" type="submit"></button>
+        <a className="e2215_686  link-primary" onClick={(e) => go_to_form(e, 6)} href="">Zurück</a>
 
-        <button class="e2215_712">WEITER</button>
-        <span class="e2215_713">Überspringen</span>
+
+        <div class="btn e2215_1522 btn-outline-primary" onClick={handleClick}></div>
+        <div class="e2215_1573"></div>
+        <div class="e2215_1574" ></div>
+       
+        <span class="e2215_1575">{link}</span>
+        <a class="e2215_1576"></a>
+        <span class="e2215_1577">Teile den Vertrag</span>
+
+        <iframe className="Frame_007" src="https://docs.google.com/document/d/e/2PACX-1vTdgrIVVeRUC2IT_uhkRsA1npyXX9d27T-76lvGUwIX63Sr7yyrmwaOm97VXpeWyKp1PwZBd73uyd5A/pub?embedded=true"></iframe>
+
+
+
       </form>
     </div>
   );

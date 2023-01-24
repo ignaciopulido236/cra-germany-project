@@ -14,7 +14,7 @@ const CreateRecord = () => {
       const data = await res;
       console.log(data.message)
       if (data.message === "Post Success") {
-        navigate("/updateCompany/" + data.id);
+        navigate("/gesellschaftsvertrag-ug/" + data.id);
       } 
     } catch (error) {
       navigate("/")

@@ -16,24 +16,26 @@ import CreateRecord from "./components/CreateRecord";
 import "bootstrap/dist/css//bootstrap.min.css";
 import Funnel001 from './funnel/Funnel001';
 import Funnel002 from './funnel/Funnel002';
+import {StageContextProvider } from './context/TaskContext'
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-      <Navbar /> 
-      <SideBar/>
-      <PhoneInfo/>
-       
-      <Routes>
+  <StageContextProvider>
+  <BrowserRouter>
+    <Navbar/>
+    <SideBar  stage={{ stage: '3' }} />
+    <PhoneInfo />
+    <Routes>
       <Route path="/" element={<Home />}></Route>
-        <Route path="/Form" element={<Form />}></Route>
-        <Route path="/updateCompany/:id" element={<Form />}></Route>
-        <Route path="/new" element={<CreateRecord />}></Route>
-      </Routes>
-    </BrowserRouter>
-    
+      <Route path="/Form" element={<Form />}></Route>
+      <Route path="/gesellschaftsvertrag-ug/:id" element={<Form />}></Route>
+      <Route path="/new" element={<CreateRecord />}></Route>
+    </Routes>
+  </BrowserRouter>
+  </StageContextProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

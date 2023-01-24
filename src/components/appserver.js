@@ -1,11 +1,11 @@
-const API_URL = "http://127.0.0.1:8000/api/companies/"
+const API_URL = "http://127.0.0.1:8000/api/documents/"
 
 export const listCompanies = async () => {
     return await fetch(API_URL)
 };
 
-export const getCompany = async (companyId) => {
-    return await fetch(`${API_URL}${companyId}`);
+export const getCompany = async (document_token) => {
+    return await fetch(`${API_URL}${document_token}`);
 };
 
 export const registerCompany = async (newCompany) => {
@@ -33,14 +33,9 @@ export const updateCompany = async (companyId, updatedCompany) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "name": String(updatedCompany.name).trim(),
-            "description": String(updatedCompany.name).trim()
-            /* "name": String(updatedCompany.name).trim(),
-             "description": String(updatedCompany.name).trim()*/
-
-
-            /*"foundation": parseInt(updatedCompany.foundation),
-            "website": String(updatedCompany.website).trim(),*/
+            "name": String(updatedCompany.company_name).trim(),
+            "sitz": String(updatedCompany.company_sitz).trim()
+        
         })
     });
 };
