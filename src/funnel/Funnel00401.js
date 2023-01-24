@@ -17,7 +17,8 @@ const Funnel001 = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await CompanyServer.updateCompany(token_param, doc);
-    cambiarMensaje(401);   
+
+    cambiarMensaje(5);   
   };
   useEffect(() => {
     //setGlobalState(2)
@@ -27,13 +28,12 @@ const Funnel001 = (props) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <span className="e2215_677">Daten des ersten Gesellschafters</span>
+        <span className="e2215_677">Daten des zweiten Gesellschafters</span>
         <span className="e2215_678">
-          Füllen Sie die legitimen Daten des ersten Gesellschafters vollständig
-          aus.
+        Füllen Sie die legitimen Daten des zweiten Gesellschafters vollständig aus.
         </span>
         <div className="e2215_687"></div>
-        <a className="e2215_686  link-primary" onClick={(e) => go_to_form(e, 3)} href="">Zurück</a>
+        <a className="e2215_686  link-primary" onClick={(e) => go_to_form(e, 4)} href="">Zurück</a>
 
 
         <div className="container-fluid">
@@ -42,8 +42,8 @@ const Funnel001 = (props) => {
             placeholder="Name"
             label="Email"
             type="text"
-            id="first_shareholder_name"
-            value={doc.first_shareholder_name}
+            id="second_shareholder_name"
+            value={doc.second_shareholder_name}
             onChange={handleInputChange}
           />
           <span class="e2215_715">Name *</span>
@@ -55,8 +55,8 @@ const Funnel001 = (props) => {
           first_shareholder_birthday
           label="Email"
           type="date"
-          id="first_shareholder_birthday"
-          value={doc.first_shareholder_birthday}
+          id="second_shareholder_birthday"
+          value={doc.second_shareholder_birthday}
           onChange={handleInputChange}
 
         />
@@ -66,13 +66,13 @@ const Funnel001 = (props) => {
           label="Email"
           type="text"
           /*id="funnel_Wohnort"*/
-          id="first_shareholder_residence"
-          value={doc.first_shareholder_residence}
+          id="second_shareholder_residence"
+          value={doc.second_shareholder_residence}
           onChange={handleInputChange}
 
         />
         <span class="e2215_717_Geburtsdatum">Geburtsdatum *</span>
-        <a class="e2215_713 "  onClick={(e) => go_to_form(e, 401)} href=''>Überspringen</a>
+        <a class="e2215_713 "  onClick={(e) => go_to_form(e, 5)} href=''>Überspringen</a>
 
         <button class="e2215_711" type="submit"></button>
 

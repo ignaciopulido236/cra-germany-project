@@ -50,14 +50,22 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#funnel_name {
+#company_name {
   width: 537px;
   height: 66px;
   position: absolute;
   left: 397px;
   top: 338px;
 }
-#funnel_Gegenstand {
+
+#first_shareholder_name{
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 338px;
+}
+#created {
   text-align: justify;
   width: 537px;
   height: 158px;
@@ -67,7 +75,7 @@
   padding-top: 20px;
 }
 
-#funnel_Sitz {
+#company_sitz {
   width: 537px;
   height: 66px;
   position: absolute;
@@ -238,7 +246,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#form_select_stage_3 {
+#number_of_shareholders {
   left: 385px;
   top: 338px;
   position: absolute;
@@ -264,14 +272,14 @@
   font-size: 14px;
   letter-spacing: 0;
 }
-#funnel_Wohnort {
+#first_shareholder_residence {
   width: 537px;
   height: 66px;
   position: absolute;
   left: 397px;
   top: 495px;
 }
-#funnel_Geburtsdatum {
+#first_shareholder_birthday {
   width: 537px;
   height: 66px;
   position: absolute;
@@ -329,4 +337,95 @@
 	border-color: red!important;
 	border-width: 3px!important;
 	box-shadow: none!important;
+}
+#second_shareholder_name{
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 338px;
+}
+#second_shareholder_residence {
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 495px;
+}
+#second_shareholder_birthday {
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 416px;
+}
+
+#Gesellschaftskapital {
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 338px;
+}
+#first_anteil {
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 338px;
+}
+#second_anteil {
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 338px;
+}
+#Beschlussfähigkeit_prozent{
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 338px;
+}
+#Mehrheitsverhältnisse_prozent{
+  width: 537px;
+  height: 66px;
+  position: absolute;
+  left: 397px;
+  top: 338px;
+}
+.e2215_721002 {
+  color: rgba(
+    12.085939273238182,
+    34.87655773758888,
+    69.0625025331974,
+    0.6299999952316284
+  );
+  width: 244px;
+  height: 400px;
+  position: absolute;
+  left: 1103px;
+  top: 268px;
+  font-family: Montserrat;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.e2215_718003 {
+  background-color: rgba(
+    247.00000047683716,
+    245.00000059604645,
+    242.00000077486038,
+    1
+  );
+  width: 307px;
+  height: 500px;
+  position: absolute;
+  left: 1071px;
+  top: 190px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }

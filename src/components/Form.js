@@ -15,18 +15,34 @@ import Lateral003 from "../funnel/Lateral003";
 import Funnel004 from "../funnel/Funnel004";
 import Lateral004 from "../funnel/Lateral004";
 
+import Funnel00401 from "../funnel/Funnel00401";
+import Lateral00401 from "../funnel/Lateral00401";
+
 import Funnel005 from "../funnel/Funnel005";
 import Lateral005 from "../funnel/Lateral005";
 
 import Funnel006 from "../funnel/Funnel006";
 import Lateral006 from "../funnel/Lateral006";
 
+import Funnel006001 from "../funnel/Funnel006001";
+import Lateral006001 from "../funnel/Lateral006001";
+
+import Funnel006002 from "../funnel/Funnel006002";
+import Lateral006002 from "../funnel/Lateral006002";
+
+import Funnel006003 from "../funnel/Funnel006003";
+import Lateral006003 from "../funnel/Lateral006003";
+
+import Funnel006004 from "../funnel/Funnel006004";
+import Lateral006004 from "../funnel/Lateral006004";
+
 import Funnel007 from "../funnel/Funnel007";
 import Lateral007 from "../funnel/Lateral007";
 let document_token = ""; //Global Variable
 
 const CompanyForm = () => {
-  const { globalState, setGlobalState } = useContext(StageContext);
+  const { globalState, setGlobalState, setTokenParam,getCompany } =
+    useContext(StageContext);
 
   const navigate = useNavigate();
   const params = useParams();
@@ -82,17 +98,17 @@ const CompanyForm = () => {
     }
   };
 
-  const getCompany = async (companyId) => {
-    try {
-      const res = await CompanyServer.getCompany(companyId);
-      const data = await res.json();
-      const { name, foundation, website } = data.company;
-      setCompany({ name, foundation, website });
-      document_token = data.company.description;
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getCompany = async (companyId) => {
+  //   try {
+  //     const res = await CompanyServer.getCompany(companyId);
+  //     const data = await res.json();
+  //     const { name, foundation, website } = data.company;
+  //     setCompany({ name, foundation, website });
+  //     document_token = data.company.description;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   const [Stage, setStage] = useState(1);
 
   useEffect(() => {
@@ -102,6 +118,7 @@ const CompanyForm = () => {
     }
     if (params.id) {
       getCompany(params.id);
+      setTokenParam(params.id);
     } else {
       console.log(params.id);
       /*NewRecord()*/
@@ -111,11 +128,9 @@ const CompanyForm = () => {
     const lateral_stage_el = document.getElementById("lateral_stage_" + Stage);
     stage_el.style.visibility = "visible";
     lateral_stage_el.style.visibility = "visible";
-    
-
 
     // eslint-disable-next-line
-  }, [Stage,globalState]);
+  }, [Stage, globalState]);
   function padreAHijo(stage_000) {
     console.log(stage_000);
     setStage(stage_000);
@@ -142,11 +157,26 @@ const CompanyForm = () => {
           <div id="stage_4" className="stages">
             <Funnel004 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
+           <div id="stage_401" className="stages">
+            <Funnel00401 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+          </div> 
           <div id="stage_5" className="stages">
             <Funnel005 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
           <div id="stage_6" className="stages">
             <Funnel006 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+          </div>
+          <div id="stage_6001" className="stages">
+            <Funnel006001 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+          </div>
+          <div id="stage_6002" className="stages">
+            <Funnel006002 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+          </div>
+          <div id="stage_6003" className="stages">
+            <Funnel006003 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+          </div>
+          <div id="stage_6004" className="stages">
+            <Funnel006004 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
           <div id="stage_7" className="stages">
             <Funnel007
@@ -168,11 +198,26 @@ const CompanyForm = () => {
           <div id="lateral_stage_4" className="stages">
             <Lateral004 />
           </div>
+          <div id="lateral_stage_401" className="stages">
+            <Lateral00401 />
+          </div>
           <div id="lateral_stage_5" className="stages">
             <Lateral005 />
           </div>
           <div id="lateral_stage_6" className="stages">
             <Lateral006 />
+          </div>
+          <div id="lateral_stage_6001" className="stages">
+            <Lateral006001 />
+          </div>
+          <div id="lateral_stage_6002" className="stages">
+            <Lateral006002 />
+          </div>
+          <div id="lateral_stage_6003" className="stages">
+            <Lateral006003 />
+          </div>
+          <div id="lateral_stage_6004" className="stages">
+            <Lateral006004/>
           </div>
           <div id="lateral_stage_7" className="stages">
             <Lateral007 />

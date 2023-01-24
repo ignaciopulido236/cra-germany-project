@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import { StageContext } from "../context/TaskContext";
 
 
 import "./funnel.css";
 const Funnel001 = (props) => {
-  const { globalState, setGlobalState, doc, token_param, CompanyServer, handleInputChange } = useContext(StageContext);
+  const { globalState, setGlobalState,doc,token_param,CompanyServer,handleInputChange } = useContext(StageContext);
 
 
   const [show, setShow] = useState(false);
@@ -13,26 +13,26 @@ const Funnel001 = (props) => {
   const go_to_form = async (e, stage_number) => {
     e.preventDefault();
     cambiarMensaje(stage_number);
-    if (stage_number == 7) {
+    if (stage_number==7){
       setGlobalState(4)
-    } else if (stage_number < 7) {
+    } else if (stage_number<7) {
       setGlobalState(2)
     }
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    doc.first_anteil = parseFloat(doc.first_anteil)
+    doc.first_anteil= parseFloat(doc.first_anteil)
     await CompanyServer.updateCompany(token_param, doc)
-    cambiarMensaje(6001);
+    cambiarMensaje(6004);
   };
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <span className="e2215_677">
-
-          Anteil erster Gesellschafter</span>
+        <span className="e2215_677"> 
+Gesellschafterbeschlüsse
+ </span>
         <span className="e2215_678">
-          Bitte geben Sie den Anteil des zweiten Gesellschafters am Gesellschaftskapital an.
+        Mit welcher Mehrheit sollen Gesellschafterbeschlüsse über wesentliche Geschäfte gefasst werden?
         </span>
         <div className="e2215_687"></div>
         <a
@@ -45,7 +45,7 @@ const Funnel001 = (props) => {
 
         <div className="container-fluid">
           <input
-            className="form-control"
+            className="form-control" 
             min="0"
             max="100"
             id="first_anteil"
@@ -60,7 +60,7 @@ const Funnel001 = (props) => {
 
         <button class="e2215_711" type="submit">WEITER</button>
 
-        <a class="e2215_713 " onClick={(e) => go_to_form(e, 6001)} href=''>Überspringen</a>
+        <a class="e2215_713 " onClick={(e) => go_to_form(e, 6004)} href=''>Überspringen</a>
 
       </form>
     </div>

@@ -1,15 +1,20 @@
 import React, { useEffect, useState,useContext } from "react";
 import { StageContext } from "../context/TaskContext";
+import { useNavigate, useParams } from "react-router-dom";
+import * as CompanyServer from "../components/appserver";
+
+
 
 
 import "./funnel.css";
 const Funnel002 = (props) => {
-  const { globalState, setGlobalState } = useContext(StageContext);
-  
+  const { globalState, setGlobalState,getCompany,doc ,token_param,handleInputChange } = useContext(StageContext);
+  //const params = useParams()
   const [show, setShow] = useState(false);
-  const alert_funnel_001 = show ? "show" : "hide";
+  //const alert_funnel_001 = show ? "show" : "hide";
   const { cambiarMensaje } = props;
-  console.log(props);
+
+
   const go_to_form = async (e, stage_number) => {
     e.preventDefault();
     cambiarMensaje(stage_number);
@@ -17,8 +22,12 @@ const Funnel002 = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    await CompanyServer.updateCompany(token_param, doc);
     cambiarMensaje(3);    
   };
+  useEffect(() => {    
+    setGlobalState(1);  
+  }, []);
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -41,7 +50,11 @@ const Funnel002 = (props) => {
             className="form-control"
             label="Email"
             type="text"
-            id="funnel_Gegenstand"
+            /*id="funnel_Gegenstand"*/
+            id='created'
+            value={doc.created}
+            onChange={handleInputChange}
+
           />
           <span class="e2215_715">Gegenstand</span>
         </div>

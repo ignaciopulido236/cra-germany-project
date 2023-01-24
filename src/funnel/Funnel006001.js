@@ -21,18 +21,18 @@ const Funnel001 = (props) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    doc.first_anteil = parseFloat(doc.first_anteil)
+    doc.second_anteil = parseFloat(doc.second_anteil)
     await CompanyServer.updateCompany(token_param, doc)
-    cambiarMensaje(6001);
+    cambiarMensaje(6002);
   };
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <span className="e2215_677">
-
-          Anteil erster Gesellschafter</span>
+          Anteil zweiter Gesellschafter</span>
         <span className="e2215_678">
-          Bitte geben Sie den Anteil des zweiten Gesellschafters am Gesellschaftskapital an.
+          Bitte geben Sie den Anteil des ersten Gesellschafters am
+          Gesellschaftskapital an.
         </span>
         <div className="e2215_687"></div>
         <a
@@ -48,10 +48,10 @@ const Funnel001 = (props) => {
             className="form-control"
             min="0"
             max="100"
-            id="first_anteil"
+            id="second_anteil"
             type="number"
             onChange={handleInputChange}
-            value={doc.first_anteil}
+            value={doc.second_anteil}
           />
           <span class="e2215_715">Anteil *</span>
         </div>
@@ -60,7 +60,7 @@ const Funnel001 = (props) => {
 
         <button class="e2215_711" type="submit">WEITER</button>
 
-        <a class="e2215_713 " onClick={(e) => go_to_form(e, 6001)} href=''>Überspringen</a>
+        <a class="e2215_713 " onClick={(e) => go_to_form(e, 6002)} href=''>Überspringen</a>
 
       </form>
     </div>

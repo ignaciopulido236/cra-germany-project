@@ -8,9 +8,9 @@ import { StageContext } from "../context/TaskContext";
 
 const Funnel001 = (props) => {
 
-  const link = 'start.beglaubigt.de/gesellschaftsvertrag-ug/' + props.name;
-  const { globalState, setGlobalState } = useContext(StageContext);
+  const { globalState, setGlobalState,doc,token_param,CompanyServer,handleInputChange } = useContext(StageContext);
 
+  const link = 'http://localhost:3000/gesellschaftsvertrag-ug/' + token_param;
 
   const handleClick = async () => {
     try {

@@ -8,48 +8,30 @@ import "./funnel.css";
 import { StageContext } from "../context/TaskContext";
 
 const Funnel001 = (props) => {
-  const { globalState, setGlobalState } = useContext(StageContext);
+  const { globalState, setGlobalState,getCompany, doc,setDocument} = useContext(StageContext);
 
   const params = useParams();
-  const initialState = { id: 0, name: "", foundation: 1950, website: "" };
-  const document_init = { funnel_name: "", funnel_Sitz: "sitz*" };
-  const [doc, setDocument] = useState(document_init);
 
-  const [company, setCompany] = useState(initialState);
-  const getCompany = async (companyId) => {
-    try {
-      const res = await CompanyServer.getCompany(companyId);
-      const data = await res.json();
-      //const { company_name } = data.document.company_name;
-      console.log(data.document);
-    
-      setDocument({        ...data.document      });
-      console.log(doc.id)
-    } catch (error) {
-      console.log(error);
-    }
-  };
   const go_to_form = async (e, stage_number) => {
     e.preventDefault();
     cambiarMensaje(stage_number);
   };
 
-  useEffect(() => {
-    setGlobalState(1);
-    if (params.id) {
-      getCompany(params.id);
-    }
-    alert(doc)
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   setGlobalState(1);
+  //   if (params.id) {
+  //     getCompany(params.id);
+  //   }
+  //   // eslint-disable-next-line
+  // }, []);
   const [show, setShow] = useState(false);
   const alert_funnel_001 = show ? "show" : "hide";
   const { cambiarMensaje, Onsubmit } = props;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const funnel_name = document.getElementById("funnel_name");
-    const funnel_Sitz = document.getElementById("funnel_Sitz");
+    const funnel_name = document.getElementById("company_name");
+    const funnel_Sitz = document.getElementById("company_sitz");
     await CompanyServer.updateCompany(params.id, doc);
     //
     if (!funnel_name.value || !funnel_Sitz.value) {
@@ -72,12 +54,8 @@ const Funnel001 = (props) => {
     }
   };
   const handleInputChange = (e) => {
-    //document.name = e.target.value;
-    console.log(e.target.value);
-
+    //console.log(e.target.value);
     setDocument({ ...doc, [e.target.id]: e.target.value });
-
-    //console.log({ ...document, [e.target.id]: e.target.value });
   };
 
   return (
@@ -102,7 +80,7 @@ const Funnel001 = (props) => {
             value={doc.company_name}
             label="Email"
             type="text"
-            id="funnel_name"
+            id="company_name"
             onChange={handleInputChange}
           ></input>
 
@@ -110,10 +88,10 @@ const Funnel001 = (props) => {
         </div>
         <input
           className="form-control"
-          value={doc.funnel_Sitz}
+          value={doc.company_sitz}
           label="Email"
           type="text"
-          id="funnel_Sitz"
+          id="company_sitz"
           onChange={handleInputChange}
         />
 
