@@ -10,7 +10,7 @@ export function StageContextProvider(props) {
 
 
   let [globalState, setGlobalState] = useState(0);
-  let [linkid,setLinkId]=useState('')
+  let [linkid,setLinkId]=useState('1DopqbC_SvczOoERGlLw1Jq0RlwPeoGO_OR4wj-eHtNI')
   const document_init = { funnel_name: "", funnel_Sitz: "sitz*" };
   const [doc, setDocument] = useState(document_init);
 
@@ -35,12 +35,14 @@ export function StageContextProvider(props) {
   const get_link = async (token_param) => {
     try {
       const res = await CompanyServer.generate_document(token_param);
-      const data = await res.json();
+      //const data = await res.json();
+      return res
       //const { company_name } = data.document.company_name;
-
     } catch (error) {
       console.log(error);
+      console.log("error")
     }
+    
   };
 
 

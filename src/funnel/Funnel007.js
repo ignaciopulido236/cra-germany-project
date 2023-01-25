@@ -40,7 +40,6 @@ const Funnel001 = (props) => {
   const alert_funnel_001 = show ? "show" : "hide";
   const { cambiarMensaje } = props;
 
-
   const go_to_form = async (e, stage_number) => {
     e.preventDefault();
     cambiarMensaje(stage_number);
@@ -66,7 +65,7 @@ const Funnel001 = (props) => {
         <a class="e2215_1576"></a>
         <span class="e2215_1577">Teile den Vertrag </span>
 
-        <iframe className="Frame_007" src="https://docs.google.com/document/d/e/2PACX-1vTdgrIVVeRUC2IT_uhkRsA1npyXX9d27T-76lvGUwIX63Sr7yyrmwaOm97VXpeWyKp1PwZBd73uyd5A/pub?embedded=true"></iframe>
+        <iframe className="Frame_007" src={`https://docs.google.com/document/d/${linkid}/preview`}></iframe>
 
 
 

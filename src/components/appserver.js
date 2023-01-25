@@ -22,7 +22,7 @@ export const registerCompany = async (newCompany) => {
     })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            /*console.log(data);*/
             return data;
         });
 };
@@ -109,7 +109,7 @@ export const deleteCompany = async (companyId) => {
 
 
 export const generate_document = async (document_token) => {
-    alert("Requesting Document")
+   /* alert("Requesting Document")*/
 
     return await fetch('http://127.0.0.1:8000/api/send-webhook/' + document_token, {
         method: "get",
