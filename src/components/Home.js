@@ -22,19 +22,26 @@ const Home = () => {
           <PhoneInfo />
         </div>
         <div id="body-container">
-          <div className="e2215_815"></div>
-          <div className="e2215_816">
-            <img src={group_48} alt="group_48 Logo" style={{ width: "100%" }} />
+          <div id="form-container">
+            <div className="e2215_815"></div>
+            <div className="e2215_816">
+              <img src={group_48} alt="group_48 Logo" style={{ width: "100%" }} />
+            </div>
+            <span className="e2215_779"> UG Gesellschaftervertrag erstellen. </span>
+            <span className="e2215_780">
+              In wenigen Schritten helfen wir Ihnen einen Gesellschaftervertrag zu
+              erstellen.
+            </span>
+            <div className="e2215_813"></div>
+            <Link className="e2215_814 text-decoration-none" to="/new">
+              STARTEN
+            </Link>
           </div>
-          <span className="e2215_779"> UG Gesellschaftervertrag erstellen. </span>
-          <span className="e2215_780">
-            In wenigen Schritten helfen wir Ihnen einen Gesellschaftervertrag zu
-            erstellen.
-          </span>
-          <div className="e2215_813"></div>
-          <Link className="e2215_814 text-decoration-none" to="/new">
-            STARTEN
-          </Link>
+          <div id="help-container">
+
+          </div>
+
+
         </div>
       </div>
     </div>
