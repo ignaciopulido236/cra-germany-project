@@ -1,19 +1,27 @@
 @media (min-width: 992px) {
-  .main-grid {
+  #main-grid {
     display: grid;
-    grid-template-columns: minmax(265px, auto) 2.5fr 1fr;
+    grid-template-columns: minmax(265px, auto) 1fr;
     /*grid-template-rows: 150vh;	*/
+	min-height: 100vh;
+	/*background-color: red;*/
+	margin: 0;
+  }
+  #secondary-grid{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 13fr;
+	
+  }
+  #navbar-container{
+	background-color: blue;
+  }
+  #body-container{
+	background-color: aqua;
   }
  
 }
-@media (min-width: 992px) {
-#vertical-line {
-    border-left: 1.5px solid rgb(78, 74, 74);
-    height: 100vh;
-    position: fixed;
-    left: 265px;
-  }
-}
+
 
 .phone-number {
   display: grid;

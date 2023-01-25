@@ -7,5 +7,8 @@
 }
 .just_blue{
     font-weight: bold!important;  
-    color: #1A5CBF;
+    color: #76a1e1;
+}
+#sidebar-container{
+    background-color: rgba(155, 28, 28, 0.34);
 }

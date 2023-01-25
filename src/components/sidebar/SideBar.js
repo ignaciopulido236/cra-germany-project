@@ -24,7 +24,7 @@ const SideBar = (props) => {
   };
   return (
     <div className="container-fluid d-none  d-lg-block left-bar">
-      <div className="vl" id="vertical-line"></div>
+   
       <div className="e2215_782 " aria-disabled="true">
         beglaubigt.de
       </div>
