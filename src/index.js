@@ -23,13 +23,11 @@ import {StageContextProvider } from './context/TaskContext'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StageContextProvider>
-  <BrowserRouter>
-  
+  <BrowserRouter>  
     <SideBar  stage={{ stage: '3' }} />
     <PhoneInfo />
     <Routes>
       <Route path="/" element={<Home />}></Route>
-      <Route path="/Form" element={<Form />}></Route>
       <Route path="/gesellschaftsvertrag-ug/:id" element={<Form />}></Route>
       <Route path="/new" element={<CreateRecord />}></Route>
     </Routes>
