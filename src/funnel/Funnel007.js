@@ -8,7 +8,7 @@ import { StageContext } from "../context/TaskContext";
 
 const Funnel001 = (props) => {
 
-  const { globalState, setGlobalState,doc,token_param,CompanyServer,handleInputChange } = useContext(StageContext);
+  const { globalState, setGlobalState,doc,token_param,CompanyServer,handleInputChange,linkid } = useContext(StageContext);
 
   const link = 'http://localhost:3000/gesellschaftsvertrag-ug/' + token_param;
 
@@ -55,7 +55,7 @@ const Funnel001 = (props) => {
         </span>
         <div className="e2215_687"></div>
 
-        <a className="e2215_686  link-primary" onClick={(e) => go_to_form(e, 6)} href="">Zurück</a>
+        <a className="e2215_686  link-primary" onClick={(e) => go_to_form(e, 6004)} href="">Zurück</a>
 
 
         <div class="btn e2215_1522 btn-outline-primary" onClick={handleClick}></div>
@@ -64,7 +64,7 @@ const Funnel001 = (props) => {
        
         <span class="e2215_1575">{link}</span>
         <a class="e2215_1576"></a>
-        <span class="e2215_1577">Teile den Vertrag</span>
+        <span class="e2215_1577">Teile den Vertrag </span>
 
         <iframe className="Frame_007" src="https://docs.google.com/document/d/e/2PACX-1vTdgrIVVeRUC2IT_uhkRsA1npyXX9d27T-76lvGUwIX63Sr7yyrmwaOm97VXpeWyKp1PwZBd73uyd5A/pub?embedded=true"></iframe>
 

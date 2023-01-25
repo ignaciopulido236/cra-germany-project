@@ -41,7 +41,7 @@ import Lateral007 from "../funnel/Lateral007";
 let document_token = ""; //Global Variable
 
 const CompanyForm = () => {
-  const { globalState, setGlobalState, setTokenParam,getCompany } =
+  const { globalState, setGlobalState, setTokenParam,getCompany,get_link,token_param,setLinkId } =
     useContext(StageContext);
 
   const navigate = useNavigate();
@@ -122,6 +122,10 @@ const CompanyForm = () => {
     } else {
       console.log(params.id);
       /*NewRecord()*/
+    }
+    if(Stage==7){  
+      /*setLinkId(get_link(token_param))*/
+      setLinkId(get_link('1DopqbC_SvczOoERGlLw1Jq0RlwPeoGO_OR4wj-eHtNI'))
     }
     //show selected stage
     const stage_el = document.getElementById("stage_" + Stage);

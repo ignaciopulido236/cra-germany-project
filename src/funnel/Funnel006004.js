@@ -4,7 +4,7 @@ import { StageContext } from "../context/TaskContext";
 
 import "./funnel.css";
 const Funnel001 = (props) => {
-  const { globalState, setGlobalState,doc,token_param,CompanyServer,handleInputChange } = useContext(StageContext);
+  const { globalState, setGlobalState,doc,token_param,CompanyServer,handleInputChange} = useContext(StageContext);
 
 
   const [show, setShow] = useState(false);
@@ -22,7 +22,9 @@ const Funnel001 = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     doc.Mehrheitsverhältnisse_prozent= parseFloat(doc.Mehrheitsverhältnisse_prozent)
-    await CompanyServer.updateCompany(token_param, doc)
+    await CompanyServer.updateCompany(token_param, doc)    
+    console.log('Document Requested')
+
     cambiarMensaje(7);
   };
   return (

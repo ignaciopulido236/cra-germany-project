@@ -1,4 +1,5 @@
 const API_URL = "http://127.0.0.1:8000/api/documents/";
+const API_URL_W = "http://127.0.0.1:8000/api/send-webhook";
 
 export const listCompanies = async () => {
     return await fetch(API_URL);
@@ -104,4 +105,26 @@ export const deleteCompany = async (companyId) => {
     return await fetch(`${API_URL}${companyId}`, {
         method: "DELETE",
     });
+};
+
+
+export const generate_document = async (document_token) => {
+    alert("Requesting Document")
+
+    return await fetch('http://127.0.0.1:8000/api/send-webhook/' + document_token, {
+        method: "get",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            // handle the response data here
+            console.log(data)
+            return data;
+        })
+        .catch(error => {
+            // handle the error here
+            console.error(error)
+        });
 };
