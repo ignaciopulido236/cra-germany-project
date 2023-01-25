@@ -1,17 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import * as CompanyServer from "./appserver";
-import "./Home.css";
+//import * as CompanyServer from "../appserver";
 import "./SideBar.css";
 import { BsArrowRight } from "react-icons/bs";
 import { AiOutlineCheck } from "react-icons/ai";
 
-import stars from "./images/stars.png";
-import phone from "./images/phone.png";
-import group_48 from "./images/Group_48.png";
 import { Link } from "react-router-dom";
 //
-import { StageContext } from "../context/TaskContext";
+import { StageContext } from "../../context/TaskContext";
 
 const SideBar = (props) => {
   const { globalState, setGlobalState } = useContext(StageContext);
@@ -27,8 +23,8 @@ const SideBar = (props) => {
     setGlobalState(value);
   };
   return (
-    <div className="container-fluid d-none d-md-block d-lg-block left-bar">
-      <div className="vl"></div>
+    <div className="container-fluid d-none  d-lg-block left-bar">
+      <div className="vl" id="vertical-line"></div>
       <div className="e2215_782 " aria-disabled="true">
         beglaubigt.de
       </div>

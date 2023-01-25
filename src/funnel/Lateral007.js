@@ -42,6 +42,7 @@ const Lateral007 = (props) => {
       >
         PDF DOWNLOADEN
       </a>
+      <a href={`https://docs.google.com/feeds/download/documents/export/Export?id=${linkid}&exportFormat=docx`} className="e2215_1530 btn">WORDX DOWNLOADEN</a>
       <div className="e2215_816_group50">
         <img src={Group50} alt="group_48 Logo" style={{ width: "100%" }} />
       </div>
