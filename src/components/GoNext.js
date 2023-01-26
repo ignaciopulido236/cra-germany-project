@@ -13,8 +13,8 @@ const GoNext = (props) => {
 
     return (
         <div className="container-fluid">
-            <button className="e2215_711 offset-2 offset-sm-0 col-6 col-sm-6 col-md-3" type="submit">WEITER</button>
-            <a className="e2215_713 col-6 offset-sm-0 offset-1 offset-sm-1 col-sm-5" onClick={(e) => go_to_form(e, step)} href=''>Überspringen</a>
+            <button className="e2215_711 offset-0 col-4" type="submit">WEITER</button>
+            <a className="e2215_713 col-6 offset-1 " onClick={(e) => go_to_form(e, step)} href=''>Überspringen</a>
         </div>
     )
 }

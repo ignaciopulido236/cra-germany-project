@@ -184,7 +184,7 @@ const CompanyForm = () => {
       <div className="secondary-grid">
         <label className="hide_under_992px"> </label>
         <div id="body-container" >
-          <div id="form-container" >
+          <div id="form-container" className="row" >
 
             <div id="stage_1" className="stages">
               <Funnel001
