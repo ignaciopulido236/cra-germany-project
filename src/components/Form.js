@@ -42,6 +42,8 @@ import Lateral007 from "../funnel/Lateral007";
 import SideBar from "./sidebar/SideBar";
 import PhoneInfo from "./navbar/PhoneInfo";
 
+import { help } from "../funnel/help_content";
+
 
 let document_token = ""; //Global Variable
 
@@ -161,7 +163,7 @@ const CompanyForm = () => {
     stage_el.style.visibility = "visible";
     lateral_stage_el.style.visibility = "visible";
     stage_el.style.display = "block";
-    lateral_stage_el.style.visibility = "block";
+    lateral_stage_el.style.display = "block";
 
     // eslint-disable-next-line
   }, [Stage, globalState]);
@@ -241,43 +243,43 @@ const CompanyForm = () => {
           </div> 
           </div>
           <div className="help-container">
-
             <div id="lateral_stage_1" className="stages">
-              <Lateral001 />
+             
+              <Lateral001 content={help.help_01} />
             </div>
         
             <div id="lateral_stage_2" className="stages">
-              <Lateral002 />
+            <Lateral001 content={help.help_02} />
             </div>
                
             <div id="lateral_stage_3" className="stages">
-              <Lateral003 />
+            <Lateral001 content={help.help_03} />
             </div>
          
             <div id="lateral_stage_4" className="stages">
-              <Lateral004 />
+            <Lateral001 content={help.help_04} />
             </div>
              
             <div id="lateral_stage_401" className="stages">
-              <Lateral00401 />
+            <Lateral001 content={help.help_04} />
             </div>
             <div id="lateral_stage_5" className="stages">
-              <Lateral005 />
+            <Lateral001 content={help.help_05} />
             </div>
             <div id="lateral_stage_6" className="stages">
-              <Lateral006 />
+            <Lateral001 content={help.help_06} />
             </div>
             <div id="lateral_stage_6001" className="stages">
-              <Lateral006001 />
+            <Lateral001 content={help.help_06} />
             </div>
             <div id="lateral_stage_6002" className="stages">
-              <Lateral006002 />
+            <Lateral001 content={help.help_06} />
             </div>
             <div id="lateral_stage_6003" className="stages">
-              <Lateral006003 />
+            <Lateral001 content={help.help_06} />
             </div>
             <div id="lateral_stage_6004" className="stages">
-              <Lateral006004 />
+            <Lateral001 content={help.help_06} />
             </div>
             <div id="lateral_stage_7" className="stages">
               <Lateral007 />

@@ -55,6 +55,7 @@ const Funnel001 = (props) => {
         <span class=" col-8" >   <label class="e2215_1575 ">{link}</label></span>
 
       </div>
+ 
 
 <iframe className="Frame_007 container-fluid mt-3" src={`https://docs.google.com/document/d/${linkid}/preview`}></iframe>
 

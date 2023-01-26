@@ -3,9 +3,9 @@ import { StageContext } from "../context/TaskContext";
 import { useNavigate, useParams } from "react-router-dom";
 import * as CompanyServer from "../components/appserver";
 import { BsArrowLeft } from "react-icons/bs"
-
-
-
+import GoNext from "../components/GoNext";
+import GoBackButton from "../components/GoBackButton";
+import Title_001 from "./Title_001";
 
 import "./funnel.css";
 const Funnel002 = (props) => {
@@ -31,21 +31,11 @@ const Funnel002 = (props) => {
   }, []);
   return (
     <div className="container-fluid" >
-      <form id="form-002" className="row offset-md-1 col-md-10" onSubmit={handleSubmit} style={{ backgroundColor: "red" }}>
-        <a
-          style={{ marginTop: "40px" }}
-          className="e2215_686 col-12 link-primary"
-          onClick={(e) => go_to_form(e, 1)}
-          href=""
-        >
-          <BsArrowLeft />
-          Zurück
-        </a>
-        <span className="e2215_677"> Gegenstand der Gesellschaft </span>
-        <span className="e2215_678 col-md-7">
-          Beschreiben Sie den Gegenstand der Gesellschaft, um das Ziel der
-          Tätigkeit zu erläutern.
-        </span>
+      <form id="form-v1" className="row offset-md-1 col-md-10" onSubmit={handleSubmit} style={{ backgroundColor: "red" }}>
+       <GoBackButton step="1"/>
+       <Title_001 content="Gegenstand der Gesellschaft" description="       Beschreiben Sie den Gegenstand der Gesellschaft, um das Ziel der
+          Tätigkeit zu erläutern."/>   
+   
 
 
         <div className="col-10">

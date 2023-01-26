@@ -18,7 +18,7 @@ const Funnel001 = (props) => {
     };
     return (
         <div className="container-fluid"  >
-            <form id="form-003" className="row offset-md-1 col-md-10" onSubmit={handleSubmit} style={{ backgroundColor: "yellow" }}>
+            <form id="form-v1" className="row offset-md-1 col-md-10" onSubmit={handleSubmit} style={{ backgroundColor: "yellow" }}>
                 <GoBackButton step="2"></GoBackButton>
                 <span className="e2215_677">Anzahl der Gesellschafter</span>
                 <span className="e2215_678">

@@ -9,6 +9,8 @@ import "../components/Home.css"
 import { StageContext } from "../context/TaskContext";
 import { BsArrowLeft } from "react-icons/bs"
 import { CiCircleAlert } from "react-icons/ci"
+import Title_001 from "./Title_001";
+import GoNext from "../components/GoNext";
 
 const Funnel001 = (props) => {
   const { globalState, setGlobalState, getCompany, doc, setDocument } = useContext(StageContext);
@@ -63,7 +65,7 @@ const Funnel001 = (props) => {
 
   return (
     <div className="container-fluid" >
-      <form id="form-001" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" >
+      <form id="form-v1" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" >
         <Link
           style={{ marginTop: "40px" }}
           onClick={() => setGlobalState(0)}
@@ -73,50 +75,41 @@ const Funnel001 = (props) => {
           <BsArrowLeft />
           Zurück
         </Link>
-        <span className="row e2215_677" > Name und Sitz der Gesellschaft </span>
-        <span className="row e2215_678 col-md-8">
-          Füllen Sie den Name der Gesellschaft und den Sitz in den
-          untenstehenden Feldern ein.
-        </span>
-
-        <div className="col-10">
-          {/* <span class="e2215_715">Name * </span> */}
-          <input
-            className="form-control "
-            value={doc.company_name}
-            label="Email"
-            type="text"
-            id="company_name"
-            onChange={handleInputChange}
-          ></input>
-        </div>
-        <div className="col-10">
-          {/* <span className="e2215_717">Sitz *</span> */}
-          <input
-            className="form-control col-8"
-            value={doc.company_sitz}
-            label="Email"
-            type="text"
-            id="company_sitz"
-            onChange={handleInputChange}
-          />
-          <div id="alert_funnel_001" style={{ display: show ? "block" : "none" }}>
-
-            <span className="alert_message_001">
-              <CiCircleAlert /> Das Feld darf nicht leer sein zum Fortfahren.
-            </span>
-          </div>
-        </div>
+        <Title_001 content=" Name und Sitz der Gesellschaft" description="Füllen Sie den Name der Gesellschaft und den Sitz in den
+          untenstehenden Feldern ein."/>
         <div className="container-fluid">
-          <button className="e2215_711 col-3" type="submit">
-            WEITER
-          </button>
 
+          <div className="col-10 pb-4">
+            {/* <span class="e2215_715">Name * </span> */}
+            <input
+              className="form-control "
+              value={doc.company_name}
+              label="Email"
+              type="text"
+              id="company_name"
+              onChange={handleInputChange}
+            ></input>
+          </div>
+          <div className="col-10">
+            {/* <span className="e2215_717">Sitz *</span> */}
+            <input
+              className="form-control col-8"
+              value={doc.company_sitz}
+              label="Email"
+              type="text"
+              id="company_sitz"
+              onChange={handleInputChange}
+            />
+            <div id="alert_funnel_001" style={{ display: show ? "block" : "none" }}>
 
-          <a className="e2215_713 offset-1 " onClick={(e) => go_to_form(e, 2)} href="">
-            Überspringen
-          </a>
+              <span className="alert_message_001">
+                <CiCircleAlert /> Das Feld darf nicht leer sein zum Fortfahren.
+              </span>
+            </div>
+          </div>
+
         </div>
+        <GoNext step="2" />
 
 
 
