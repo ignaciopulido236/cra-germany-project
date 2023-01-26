@@ -38,10 +38,16 @@ import Lateral006004 from "../funnel/Lateral006004";
 
 import Funnel007 from "../funnel/Funnel007";
 import Lateral007 from "../funnel/Lateral007";
+
+import SideBar from "./sidebar/SideBar";
+import PhoneInfo from "./navbar/PhoneInfo";
+
+
 let document_token = ""; //Global Variable
 
 const CompanyForm = () => {
   const {
+    Stage, setStage,
     globalState,
     setGlobalState,
     setTokenParam,
@@ -116,12 +122,13 @@ const CompanyForm = () => {
   //     console.log(error);
   //   }
   // };
-  const [Stage, setStage] = useState(1);
+  // const [Stage, setStage] = useState(1);
 
   useEffect(() => {
     const stages = document.getElementsByClassName("stages");
     for (let i = 0; i < stages.length; i++) {
       stages[i].style.visibility = "hidden";
+      stages[i].style.display = "none";
     }
     if (params.id) {
       getCompany(params.id);
@@ -154,6 +161,8 @@ const CompanyForm = () => {
     const lateral_stage_el = document.getElementById("lateral_stage_" + Stage);
     stage_el.style.visibility = "visible";
     lateral_stage_el.style.visibility = "visible";
+    stage_el.style.display = "block";
+    lateral_stage_el.style.visibility = "block";
 
     // eslint-disable-next-line
   }, [Stage, globalState]);
@@ -163,23 +172,32 @@ const CompanyForm = () => {
   }
 
   return (
-    <div className="container-fluid">
-      <div>{Stage}</div>
-      <div className="row">
-        <div className="col-3"></div>
-        <div className="FormContent col-5 text-center">
-          <div id="stage_1" className="stages">
-            <Funnel001
-              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
-              Onsubmit={company}
-            />
-          </div>
-          <div id="stage_2" className="stages">
-            <Funnel002 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
-          </div>
+    <div id="main-grid">
+      <div className="hide_under_992px"></div>
+      {/* <div id="navbar-container">
+        <PhoneInfo />
+      </div> */}
+      {/* <div id="sidebar-container">
+        <SideBar stage={{ stage: '3' }} />
+      </div> */}
+      <div className="secondary-grid">
+        <label className="hide_under_992px"> </label>
+        <div id="body-container" >
+          <div id="form-container" >
+
+            <div id="stage_1" className="stages">
+              <Funnel001
+                cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
+                Onsubmit={company}
+              />
+            </div>
+            <div id="stage_2" className="stages">
+              <Funnel002 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+            </div>            
           <div id="stage_3" className="stages">
             <Funnel003 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
+          {/*
           <div id="stage_4" className="stages">
             <Funnel004 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
@@ -219,44 +237,50 @@ const CompanyForm = () => {
               cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
               name={document_token}
             />
+          </div> */}
           </div>
-        </div>
-        <div className="col-4">
-          <div id="lateral_stage_1" className="stages">
-            <Lateral001 />
-          </div>
-          <div id="lateral_stage_2" className="stages">
-            <Lateral002 />
-          </div>
-          <div id="lateral_stage_3" className="stages">
-            <Lateral003 />
-          </div>
-          <div id="lateral_stage_4" className="stages">
-            <Lateral004 />
-          </div>
-          <div id="lateral_stage_401" className="stages">
-            <Lateral00401 />
-          </div>
-          <div id="lateral_stage_5" className="stages">
-            <Lateral005 />
-          </div>
-          <div id="lateral_stage_6" className="stages">
-            <Lateral006 />
-          </div>
-          <div id="lateral_stage_6001" className="stages">
-            <Lateral006001 />
-          </div>
-          <div id="lateral_stage_6002" className="stages">
-            <Lateral006002 />
-          </div>
-          <div id="lateral_stage_6003" className="stages">
-            <Lateral006003 />
-          </div>
-          <div id="lateral_stage_6004" className="stages">
-            <Lateral006004 />
-          </div>
-          <div id="lateral_stage_7" className="stages">
-            <Lateral007 />
+          <div className="help-container">
+
+            <div id="lateral_stage_1" className="stages">
+              <Lateral001 />
+            </div>
+        
+            <div id="lateral_stage_2" className="stages">
+              <Lateral002 />
+            </div>
+               
+            <div id="lateral_stage_3" className="stages">
+              <Lateral003 />
+            </div>
+         
+            <div id="lateral_stage_4" className="stages">
+              <Lateral004 />
+            </div>
+                {/*
+            <div id="lateral_stage_401" className="stages">
+              <Lateral00401 />
+            </div>
+            <div id="lateral_stage_5" className="stages">
+              <Lateral005 />
+            </div>
+            <div id="lateral_stage_6" className="stages">
+              <Lateral006 />
+            </div>
+            <div id="lateral_stage_6001" className="stages">
+              <Lateral006001 />
+            </div>
+            <div id="lateral_stage_6002" className="stages">
+              <Lateral006002 />
+            </div>
+            <div id="lateral_stage_6003" className="stages">
+              <Lateral006003 />
+            </div>
+            <div id="lateral_stage_6004" className="stages">
+              <Lateral006004 />
+            </div>
+            <div id="lateral_stage_7" className="stages">
+              <Lateral007 />
+            </div>*/}
           </div>
         </div>
       </div>

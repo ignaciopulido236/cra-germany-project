@@ -27,6 +27,21 @@ export function StageContextProvider(props) {
       console.log(error);
     }
   };
+  const [Stage, setStage] = useState(1);
+
+const go_to_form = async (e, stage_number) => {
+    e.preventDefault();
+    cambiarMensaje(stage_number);
+    if (stage_number == 4) {
+        setGlobalState(2)
+    } else if (stage_number == 2) {
+        setGlobalState(1)
+    }
+};
+function cambiarMensaje(stage_000) {
+
+  setStage(stage_000);
+}
 
   const handleInputChange = (e) => {
     //console.log(e.target.value);
@@ -52,7 +67,7 @@ export function StageContextProvider(props) {
   useEffect(() => { }, [globalState]);
 
   return (
-    <StageContext.Provider value={{ globalState, setGlobalState, getCompany, doc, setTokenParam, token_param, setDocument, handleInputChange, CompanyServer,get_link,linkid,setLinkId }}>
+    <StageContext.Provider value={{Stage, setStage, globalState, setGlobalState, getCompany, doc, setTokenParam, token_param, setDocument, handleInputChange, CompanyServer,get_link,linkid,setLinkId,go_to_form }}>
       {props.children}
     </StageContext.Provider>
   );

@@ -4,13 +4,14 @@
     grid-template-columns: minmax(240px, auto) 1fr;
     /*grid-template-rows: 150vh;	*/
     min-height: 100vh;
-    /*background-color: red;*/
+   
     margin: 0;
   }
   #secondary-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 13fr;
+    /*background-color: aquamarine;*/
   }
   #navbar-container {
     display: grid;
@@ -23,6 +24,7 @@
   #body-container {
     display: grid;
     grid-template-columns: 7fr 3fr;
+   /* background-color: aquamarine;*/
   }
   #form-container {
     /*background-color: blueviolet;*/
@@ -36,6 +38,9 @@
     min-width: 265px;
     border-right: 2px solid black;
   }
+  .hide_under_992px {
+    height: 60px;
+  }
 }
 @media (max-width: 992px) {
   #sidebar-container {
@@ -43,6 +48,7 @@
   }
   .hide_under_992px {
     display: none;
+   
   }
   #main-grid {
     display: grid;
@@ -76,10 +82,10 @@
     grid-template-columns: 7fr 3fr;
   }
   #form-container {
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
   }
   #help-container {
-    background-color: aquamarine;
+   /* background-color: aquamarine;*/
   }
 }
 

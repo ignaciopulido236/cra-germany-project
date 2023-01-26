@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 
 // Components:
 import CompanyList from "./components/CompanyList";
-import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import Home from "./components/Home";
 import SideBar from "./components/sidebar/SideBar";

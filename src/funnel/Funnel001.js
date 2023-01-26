@@ -4,11 +4,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import "./funnel.css";
+import "../components/Home.css"
 
 import { StageContext } from "../context/TaskContext";
+import { BsArrowLeft } from "react-icons/bs"
+import { CiCircleAlert } from "react-icons/ci"
 
 const Funnel001 = (props) => {
-  const { globalState, setGlobalState,getCompany, doc,setDocument} = useContext(StageContext);
+  const { globalState, setGlobalState, getCompany, doc, setDocument } = useContext(StageContext);
 
   const params = useParams();
 
@@ -59,56 +62,64 @@ const Funnel001 = (props) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <span className="e2215_677"> Name und Sitz der Gesellschaft </span>
-        <span className="e2215_678">
+    <div className="container-fluid" >
+      <form id="form-001" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" >
+        <Link
+          style={{ marginTop: "40px" }}
+          onClick={() => setGlobalState(0)}
+          className="c"
+          to="/"
+        >
+          <BsArrowLeft />
+          Zurück
+        </Link>
+        <span className="row e2215_677" > Name und Sitz der Gesellschaft </span>
+        <span className="row e2215_678 col-md-8">
           Füllen Sie den Name der Gesellschaft und den Sitz in den
           untenstehenden Feldern ein.
         </span>
-        <div className="e2215_687"></div>
-        <Link
-          onClick={() => setGlobalState(0)}
-          className="e2215_686 link-primary"
-          to="/"
-        >
-          Zurück
-        </Link>
-        <div className="container-fluid">
+
+        <div className="col-10">
+          {/* <span class="e2215_715">Name * </span> */}
           <input
-            className="form-control"
+            className="form-control "
             value={doc.company_name}
             label="Email"
             type="text"
             id="company_name"
             onChange={handleInputChange}
           ></input>
-
-          <span class="e2215_715">Name * </span>
         </div>
-        <input
-          className="form-control"
-          value={doc.company_sitz}
-          label="Email"
-          type="text"
-          id="company_sitz"
-          onChange={handleInputChange}
-        />
+        <div className="col-10">
+          {/* <span className="e2215_717">Sitz *</span> */}
+          <input
+            className="form-control col-8"
+            value={doc.company_sitz}
+            label="Email"
+            type="text"
+            id="company_sitz"
+            onChange={handleInputChange}
+          />
+          <div id="alert_funnel_001" style={{ display: show ? "block" : "none" }}>
 
-        <span className="e2215_717">Sitz *</span>
-        <button className="e2215_711" type="submit">
-          WEITER
-        </button>
-
-        <a className="e2215_713 " onClick={(e) => go_to_form(e, 2)} href="">
-          Überspringen
-        </a>
-        <div id="alert_funnel_001" style={{ display: show ? "block" : "none" }}>
-          <span className="alert_001"></span>
-          <span className="alert_message_001">
-            Das Feld darf nicht leer sein zum Fortfahren.
-          </span>
+            <span className="alert_message_001">
+              <CiCircleAlert /> Das Feld darf nicht leer sein zum Fortfahren.
+            </span>
+          </div>
         </div>
+        <div className="container-fluid">
+          <button className="e2215_711 col-3" type="submit">
+            WEITER
+          </button>
+
+
+          <a className="e2215_713 offset-1 " onClick={(e) => go_to_form(e, 2)} href="">
+            Überspringen
+          </a>
+        </div>
+
+
+
       </form>
     </div>
   );

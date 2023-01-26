@@ -10,7 +10,7 @@ import PhoneInfo, { Phone } from "./navbar/PhoneInfo"
 import SideBar from "./sidebar/SideBar";
 
 const Home = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   return (
     <div id="main-grid">
@@ -24,7 +24,6 @@ const Home = () => {
       </div>
       <div id="secondary-grid">
         <label className="hide_under_992px"></label>
-
         <div id="body-container">
           <div id="form-container">
             <div className="d-flex container-fluid col-8 e2215_815" style={{ marginTop: "1px", padding: "20px" }}>
@@ -41,15 +40,11 @@ const Home = () => {
             <Link className="mt-5 mb-3 offset-2 btn btn-primary e2215_814" to="/new">
               STARTEN
             </Link>
-
-
           </div>
           <div id="help-container">
-            
+
 
           </div>
-
-
         </div>
       </div>
     </div>
