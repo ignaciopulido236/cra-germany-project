@@ -47,9 +47,9 @@
 }
 
 #first_shareholder_name{
-  width: 537px;
+  /* width: 537px; */
   height: 66px;
-  position: absolute;
+ /* position: absolute;*/
   left: 397px;
   top: 338px;
 }
@@ -268,13 +268,13 @@
   background-size: cover;
 }
 #number_of_shareholders {
-  left: 385px;
-  top: 338px;
-  position: absolute;
-  width: 537px;
+  /* left: 385px;
+  top: 338px; */
+  /* position: absolute; */
+  /* width: 537px; */
   height: 66;
-  padding: 15px;
-  font-size: 15px;
+   padding: 15px;
+  font-size: 15px; 
 }
 .e2215_717_Wohnort {
   color: rgba(
@@ -283,7 +283,7 @@
     69.0625025331974,
     0.4099999964237213
   );
-  width: 36px;
+  /* width: 36px; */
   height: 21px;
   position: absolute;
   left: 410px;
@@ -294,16 +294,16 @@
   letter-spacing: 0;
 }
 #first_shareholder_residence {
-  width: 537px;
+  /* width: 537px; */
   height: 66px;
-  position: absolute;
+  /* position: absolute; */
   left: 397px;
   top: 495px;
 }
 #first_shareholder_birthday {
-  width: 537px;
+  /* width: 537px; */
   height: 66px;
-  position: absolute;
+  /* position: absolute; */
   left: 397px;
   top: 416px;
 }
@@ -461,6 +461,11 @@
 
 }
 #form-003{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1fr ;
+
+}
+#form-004{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 4fr 1fr ;
 

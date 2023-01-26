@@ -149,7 +149,6 @@ const CompanyForm = () => {
         }
         console.log(message.message);
         setLinkId(message.message)
-        console.log('here')
       }
       example();
 
@@ -197,10 +196,11 @@ const CompanyForm = () => {
           <div id="stage_3" className="stages">
             <Funnel003 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
-          {/*
+          
           <div id="stage_4" className="stages">
             <Funnel004 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
+       
           <div id="stage_401" className="stages">
             <Funnel00401
               cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
@@ -209,6 +209,7 @@ const CompanyForm = () => {
           <div id="stage_5" className="stages">
             <Funnel005 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
+           
           <div id="stage_6" className="stages">
             <Funnel006 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
@@ -237,7 +238,7 @@ const CompanyForm = () => {
               cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
               name={document_token}
             />
-          </div> */}
+          </div> 
           </div>
           <div className="help-container">
 
@@ -256,7 +257,7 @@ const CompanyForm = () => {
             <div id="lateral_stage_4" className="stages">
               <Lateral004 />
             </div>
-                {/*
+             
             <div id="lateral_stage_401" className="stages">
               <Lateral00401 />
             </div>
@@ -280,7 +281,7 @@ const CompanyForm = () => {
             </div>
             <div id="lateral_stage_7" className="stages">
               <Lateral007 />
-            </div>*/}
+            </div>
           </div>
         </div>
       </div>
