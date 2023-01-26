@@ -24,13 +24,11 @@ const SideBar = (props) => {
   };
   return (
     <div id="sidebar-body" >
-      <div id="sidebar-header" className="e2215_782 " aria-disabled="true">
-        
-      </div>
+      <a id="sidebar-header" className="btn btn-link" href="https://beglaubigt.de/">
+        beglaubigt.de
+
+      </a>
       <div id="sidebar-stages">
-        stages
-
-
         <label
           className={globalState == 1 ? "e2215_783 make_bold" : "e2215_783 "}
           onClick={() => change_state(1)}
@@ -99,27 +97,31 @@ const SideBar = (props) => {
             Persönliche Daten
           </span>
         </label>
-      </div>
-      <div id="sidebar-footer">    
-      footer
+
+      </div >
+
+      <div id="sidebar-footer">
+        <div></div><div></div>
+        <div id="sidebar-footer-links">
           <a
-            className="e2215_810 text-decoration-none"
+            className="text-decoration-none"
             href="https://beglaubigt.de/datenschutz"
+            style={{textAlign: "center", color:"#0C2345"}}
           >
             Datenschutzbedingungen
           </a>
 
           <a
-            className="e2215_811 text-decoration-none"
+            className="text-decoration-none"
             href="https://beglaubigt.de/impressum"
+            style={{textAlign: "center", color:"#0C2345"}}
           >
             Impressum
           </a>
-          <span className="e2215_812" aria-disabled="true">
-            beglaubigt.com Group © 2022
-          </span>
-     
-
+        </div>
+        <span style={{textAlign: "center"}} className="e2215_812" aria-disabled="true">
+          beglaubigt.com Group © 2022
+        </span>
       </div>
     </div>
   );

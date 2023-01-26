@@ -11,7 +11,6 @@ import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import Home from "./components/Home";
 import SideBar from "./components/sidebar/SideBar";
-import PhoneInfo from './components/PhoneInfo';
 import CreateRecord from "./components/CreateRecord";
 import "bootstrap/dist/css//bootstrap.min.css";
 import Funnel001 from './funnel/Funnel001';

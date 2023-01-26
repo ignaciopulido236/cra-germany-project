@@ -1,18 +1,50 @@
 @media (min-width: 992px) {
   #sidebar-body {    
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr 2fr 4fr;
-  }
+    height: 100%;
+    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 4fr 22fr 4fr;
+ 
+  } 
   #sidebar-header {
-    background-color: black;
+    color: rgba(12.085939273238182, 34.87655773758888, 69.0625025331974, 1);
+    width: 138px;
+    height: 46px;
+    position: sticky;
+    left: 51px;
+    top: 19px;
+    text-align: left;
+    font-size: 19px;
+    letter-spacing: 0;
+    text-decoration: none;   
+   
   }
   #sidebar-stages {
-    background-color: aquamarine;
+   
   }
   #sidebar-footer {
-    background-color: blue;
+   
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 10px;        
+
+    color: rgba(
+      12.085939273238182,
+      34.87655773758888,
+      69.0625025331974,
+      0.33000001311302185
+    )
   }
+}
+#sidebar-footer-links{
+   
+    display: grid;
+    grid-template-columns: 6fr 3fr;
 }
 
 .make_transparent {
@@ -27,20 +59,59 @@
   color: #76a1e1;
 }
 
-.e2215_812 {
-  color: rgba(
-    12.085939273238182,
-    34.87655773758888,
-    69.0625025331974,
-    0.33000001311302185
-  );
-  width: 153px;
-  height: 15px;
-  position: absolute;
-  left: 56px;
-  top: 863px;
-  font-family: Montserrat;
-  text-align: center;
-  font-size: 10px;
-  letter-spacing: 0;
-}
+
+
+/*
+.e2215_810 {
+    color: rgba(
+      12.085939273238182,
+      34.87655773758888,
+      69.0625025331974,
+      0.33000001311302185
+    );
+    width: 135px;
+    height: 15px;
+    position: absolute;
+    left: 26px;
+    top: 837px;
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .e2215_811 {
+    color: rgba(
+      12.085939273238182,
+      34.87655773758888,
+      69.0625025331974,
+      0.33000001311302185
+    );
+    width: 58px;
+    height: 15px;
+    position: absolute;
+    left: 174px;
+    top: 837px;
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .e2215_812 {
+    color: rgba(
+      12.085939273238182,
+      34.87655773758888,
+      69.0625025331974,
+      0.33000001311302185
+    );
+    width: 153px;
+    height: 15px;
+    position: absolute;
+    left: 56px;
+    top: 863px;
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  */

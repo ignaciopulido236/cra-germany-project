@@ -95,12 +95,12 @@ const Funnel001 = (props) => {
           onChange={handleInputChange}
         />
 
-        <span class="e2215_717">Sitz *</span>
-        <button class="e2215_711" type="submit">
+        <span className="e2215_717">Sitz *</span>
+        <button className="e2215_711" type="submit">
           WEITER
         </button>
 
-        <a class="e2215_713 " onClick={(e) => go_to_form(e, 2)} href="">
+        <a className="e2215_713 " onClick={(e) => go_to_form(e, 2)} href="">
           Überspringen
         </a>
         <div id="alert_funnel_001" style={{ display: show ? "block" : "none" }}>
