@@ -382,16 +382,16 @@
 }
 
 #Gesellschaftskapital {
-  width: 537px;
+  /* width: 537px; */
   height: 66px;
-  position: absolute;
+  /* position: absolute; */
   left: 397px;
   top: 338px;
 }
 #first_anteil {
   width: 537px;
   height: 66px;
-  position: absolute;
+  /* position: absolute; */
   left: 397px;
   top: 338px;
 }
@@ -476,4 +476,8 @@
   grid-template-rows: 2fr 8fr;
 
 
+}
+#form-v1{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1fr ;
 }

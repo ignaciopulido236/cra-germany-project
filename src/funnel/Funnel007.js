@@ -1,14 +1,15 @@
-import React, { useEffect, useState,useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import "./funnel.css";
 import "./funnel_007.css";
 import Group50 from "./images/Group50.png"
 import { StageContext } from "../context/TaskContext";
-
+import GoBackButton from "../components/GoBackButton";
+import Title_001 from "./Title_001";
 
 const Funnel001 = (props) => {
 
-  const { globalState, setGlobalState,doc,token_param,CompanyServer,handleInputChange,linkid } = useContext(StageContext);
+  const { globalState, setGlobalState, doc, token_param, CompanyServer, handleInputChange, linkid } = useContext(StageContext);
 
   const link = 'http://localhost:3000/gesellschaftsvertrag-ug/' + token_param;
 
@@ -46,30 +47,18 @@ const Funnel001 = (props) => {
     setGlobalState(2)
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <span className="e2215_677">Glückwunsch, Dokument bereit.</span>
-        <span className="e2215_678">
-          Sie können nun direkt das Dokument Online beglaubigen oder das Dokument herunterladen.
-        </span>
-        <div className="e2215_687"></div>
+    <div className="container-fluid" id="funnel-end">
+      <GoBackButton step="6" />
+      <Title_001 content="Glückwunsch, Dokument bereit." description="Sie können nun direkt das Dokument Online beglaubigen oder das Dokument herunterladen." />
+      <div id="link-box-v1" onClick={handleClick}>
+        <span class="e2215_1577 col-12">Teile den Vertrag </span>
+        <span class=" col-8" >   <label class="e2215_1575 ">{link}</label></span>
 
-        <a className="e2215_686  link-primary" onClick={(e) => go_to_form(e, 6004)} href="">Zurück</a>
+      </div>
 
-
-        <div class="btn e2215_1522 btn-outline-primary" onClick={handleClick}></div>
-        <div class="e2215_1573"></div>
-        <div class="e2215_1574" ></div>
-       
-        <span class="e2215_1575">{link}</span>
-        <a class="e2215_1576"></a>
-        <span class="e2215_1577">Teile den Vertrag </span>
-
-        <iframe className="Frame_007" src={`https://docs.google.com/document/d/${linkid}/preview`}></iframe>
+<iframe className="Frame_007 container-fluid mt-3" src={`https://docs.google.com/document/d/${linkid}/preview`}></iframe>
 
 
-
-      </form>
     </div>
   );
 };

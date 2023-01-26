@@ -4,7 +4,7 @@ import GoBackButton from "../components/GoBackButton";
 import Title_001 from "./Title_001";
 import "./funnel.css";
 import GoNext from "../components/GoNext";
-const Funnel001 = (props) => {
+const Funnel004 = (props) => {
   const { globalState, setGlobalState, doc, token_param, CompanyServer, handleInputChange } = useContext(StageContext);
 
   const [show, setShow] = useState(false);
@@ -27,7 +27,7 @@ const Funnel001 = (props) => {
     <div className="container-fluid">
       <form id="form-004" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" style={{ backgroundColor: "green" }} >
         <GoBackButton step="3"></GoBackButton>
-        <Title_001 content="Daten des ersten Gesellschafters" description="Füllen Sie die legitimen Daten des ersten Gesellschafters vollständig
+        <Title_001 content={props.title} description="Füllen Sie die legitimen Daten des ersten Gesellschafters vollständig
           aus."></Title_001>
         <div className="container-fluid">
           <div className="container-fluid ">
@@ -69,7 +69,7 @@ const Funnel001 = (props) => {
           </div>
         </div>
 
-        <GoNext step="401" />
+        <GoNext step={props.next_stage} />
         {/* <span class="e2215_717_Geburtsdatum">Geburtsdatum *</span> */}
         {/* <a class="e2215_713 " onClick={(e) => go_to_form(e, 401)} href=''>Überspringen</a> */}
 
@@ -85,4 +85,4 @@ const Funnel001 = (props) => {
   );
 };
 
-export default Funnel001;
+export default Funnel004;

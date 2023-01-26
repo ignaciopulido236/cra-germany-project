@@ -198,16 +198,16 @@ const CompanyForm = () => {
           </div>
           
           <div id="stage_4" className="stages">
-            <Funnel004 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+            <Funnel004 title="Daten des ersten Gesellschafters" next_stage="401" cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
        
           <div id="stage_401" className="stages">
-            <Funnel00401
+            <Funnel004 next_stage="5" title="Daten des zweiten Gesellschafters"
               cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
             />
           </div>
           <div id="stage_5" className="stages">
-            <Funnel005 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
+            <Funnel005 next_stage="6" description="Bitte geben Sie den Betrag ein, über welche die Gesellschaft verfügen soll." title="Kapital der Gesellschaft" cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
           </div>
            
           <div id="stage_6" className="stages">

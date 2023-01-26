@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import { StageContext } from "../context/TaskContext";
-
+import GoBackButton from "../components/GoBackButton";
+import Title_001 from "./Title_001";
 
 import "./funnel.css";
+import GoNext from "../components/GoNext";
 const Funnel001 = (props) => {
   const { globalState, setGlobalState, doc, token_param, CompanyServer, handleInputChange } = useContext(StageContext);
 
@@ -26,22 +28,12 @@ const Funnel001 = (props) => {
     cambiarMensaje(6001);
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <span className="e2215_677">
+    <div className="container-fluid">
+      <form id="form-v1" className="row offset-md-1 col-md-10" onSubmit={handleSubmit} style={{ backgroundColor: "yellow" }}>
+      <GoBackButton step="5"/>
+      <Title_001 content="Anteil erster Gesellschafter" description="  Bitte geben Sie den Anteil des zweiten Gesellschafters am Gesellschaftskapital an."></Title_001>
 
-          Anteil erster Gesellschafter</span>
-        <span className="e2215_678">
-          Bitte geben Sie den Anteil des zweiten Gesellschafters am Gesellschaftskapital an.
-        </span>
-        <div className="e2215_687"></div>
-        <a
-          className="e2215_686  link-primary"
-          onClick={(e) => go_to_form(e, 5)}
-          href=""
-        >
-          Zurück
-        </a>
+  
 
         <div className="container-fluid">
           <input
@@ -53,14 +45,11 @@ const Funnel001 = (props) => {
             onChange={handleInputChange}
             value={doc.first_anteil}
           />
-          <span class="e2215_715">Anteil *</span>
+          {/* <span class="e2215_715">Anteil *</span> */}
         </div>
+        <GoNext step="7"/>
 
-        <button class="e2215_711" type="submit"></button>
-
-        <button class="e2215_711" type="submit">WEITER</button>
-
-        <a class="e2215_713 " onClick={(e) => go_to_form(e, 6001)} href=''>Überspringen</a>
+      
 
       </form>
     </div>
