@@ -221,7 +221,6 @@ const CompanyForm = () => {
             <div id="stage_6" className="stages">
               <Funnel0008 next="7" previous="5" question={questions.q6} />
             </div>
-
             <div id="stage_7" className="stages">
               <Funnel0011 next="8" previous="6" question={questions.q7} />
             </div>
@@ -229,16 +228,49 @@ const CompanyForm = () => {
               <Funnel0008 next="9" previous="7" question={questions.q8} />
             </div>
             <div id="stage_9" className="stages">
-              <Funnel0011 next="10" previous="8" question={questions.q9} />
+              <Funnel000Template next="10" previous="8" question={questions.q9} />
             </div>
             <div id="stage_10" className="stages">
-              <Funnel0011 next="11" previous="9" question={questions.q10} />
+              <Funnel0008 next="11" previous="9" question={questions.q10} />
             </div>
             <div id="stage_11" className="stages">
-              <Funnel0011 next="12" previous="10" question={questions.q11} />
+              <Funnel0009 next="12" previous="10" question={questions.q11} />
             </div>
             <div id="stage_12" className="stages">
-              <Funnel0011 next="13" previous="11" question={questions.q12} />
+              <Funnel003 next="13" previous="11" question={questions.q12} />
+            </div>
+            <div id="stage_13" className="stages">
+              <Funnel003 next="14" previous="12" question={questions.q12} />
+            </div>
+            <div id="stage_14" className="stages">
+              <Funnel003 next="15" previous="13" question={questions.q12} />
+            </div>
+            <div id="stage_15" className="stages">
+              <Funnel003 next="16" previous="14" question={questions.q12} />
+            </div>
+            <div id="stage_16" className="stages">
+              <Funnel003 next="17" previous="15" question={questions.q12} />
+            </div>
+            <div id="stage_17" className="stages">
+              <Funnel003 next="18" previous="16" question={questions.q12} />
+            </div>
+            <div id="stage_18" className="stages">
+              <Funnel003 next="19" previous="17" question={questions.q12} />
+            </div>
+            <div id="stage_19" className="stages">
+              <Funnel003 next="20" previous="18" question={questions.q12} />
+            </div>
+            <div id="stage_20" className="stages">
+              <Funnel003 next="21" previous="19" question={questions.q12} />
+            </div>
+            <div id="stage_21" className="stages">
+              <Funnel003 next="22" previous="20" question={questions.q12} />
+            </div>
+            <div id="stage_22" className="stages">
+              <Funnel003 next="23" previous="21" question={questions.q12} />
+            </div>
+            <div id="stage_23" className="stages">
+              <Funnel003 next="24" previous="22" question={questions.q12} />
             </div>
 
 
@@ -282,25 +314,49 @@ const CompanyForm = () => {
             </div>
 
             <div id="lateral_stage_8" className="stages">
-              <Lateral001 content={help.help_07} />
-            </div>
-            <div id="lateral_stage_9" className="stages">
               <Lateral001 content={help.help_08} />
             </div>
-            <div id="lateral_stage_10" className="stages">
+            <div id="lateral_stage_9" className="stages">
               <Lateral001 content={help.help_09} />
             </div>
-            <div id="lateral_stage_11" className="stages">
+            <div id="lateral_stage_10" className="stages">
               <Lateral001 content={help.help_10} />
             </div>
-            <div id="lateral_stage_12" className="stages">
+            <div id="lateral_stage_11" className="stages">
               <Lateral001 content={help.help_11} />
             </div>
-            <div id="lateral_stage_13" className="stages">
+            <div id="lateral_stage_12" className="stages">
               <Lateral001 content={help.help_12} />
             </div>
-            <div id="lateral_stage_14" className="stages">
+            <div id="lateral_stage_13" className="stages">
               <Lateral001 content={help.help_13} />
+            </div>
+            <div id="lateral_stage_14" className="stages">
+              <Lateral001 content={help.help_14} />
+            </div>
+            <div id="lateral_stage_15" className="stages">
+              <Lateral001 content={help.help_15} />
+            </div>
+            <div id="lateral_stage_16" className="stages">
+              <Lateral001 content={help.help_16} />
+            </div>
+            <div id="lateral_stage_17" className="stages">
+              <Lateral001 content={help.help_17} />
+            </div>
+            <div id="lateral_stage_18" className="stages">
+              <Lateral001 content={help.help_18} />
+            </div>
+            <div id="lateral_stage_19" className="stages">
+              <Lateral001 content={help.help_19} />
+            </div>
+            <div id="lateral_stage_20" className="stages">
+              <Lateral001 content={help.help_20} />
+            </div>
+            <div id="lateral_stage_21" className="stages">
+              <Lateral001 content={help.help_21} />
+            </div>
+            <div id="lateral_stage_22" className="stages">
+              <Lateral001 content={help.help_22} />
             </div>
 
 
