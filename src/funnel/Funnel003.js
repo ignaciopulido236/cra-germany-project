@@ -19,8 +19,8 @@ const Funnel001 = (props) => {
     return (
         <div className="container-fluid"  >
             <form id="form-v1" className="row offset-md-1 col-md-10" onSubmit={handleSubmit} style={{ backgroundColor: "yellow" }}>
-                <GoBackButton step="2"></GoBackButton>
-                <span className="e2215_677">Anzahl der Gesellschafter</span>
+                <GoBackButton step={props.previous}></GoBackButton>
+                <span className="e2215_677">FIX_003</span>
                 <span className="e2215_678">
                     Wählen Sie aus, wie viele Gesellschafter die Gesellschaft haben wird.
                 </span>
@@ -32,7 +32,7 @@ const Funnel001 = (props) => {
                         <option value="5">5 Gesellschafter</option>
                     </select>
                 </div>
-                <GoNext step="4" />
+                <GoNext step={props.next} />
                 {/* <div className="container-fluid">
                     <button class="e2215_711" type="submit">WEITER</button>
                     <a class="e2215_713 " onClick={(e) => go_to_form(e, 4)} href=''>Überspringen</a>

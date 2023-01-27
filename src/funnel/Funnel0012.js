@@ -14,7 +14,7 @@ import GoNext from "../components/GoNext";
 import GoBackButton from "../components/GoBackButton";
 import Title_002 from "./Title_002";
 
-const Funnel0011 = (props) => {
+const Funnel0012 = (props) => {
   const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
 
   const params = useParams();
@@ -31,8 +31,8 @@ const Funnel0011 = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const step=e.currentTarget.getAttribute('step')
-    go_to_form(e,step)
+    const step = e.currentTarget.getAttribute('step')
+    go_to_form(e, step)
 
     //   // await CompanyServer.updateCompany(params.id, doc);
     //   //
@@ -42,34 +42,41 @@ const Funnel0011 = (props) => {
     //   setDocument({ ...doc, [e.target.id]: e.target.value });
   };
 
-  const handleInputChange = (e) => {
-    //console.log(e.target.value);
-    setDocument({ ...doc, [e.target.id]: e.target.value });
-  };
- 
+
+
 
   return (
     <div className="container-fluid" >
       <form id="form-v0010" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" step={props.next}>
         <GoBackButton step={props.previous} />
-        <Title_002 content={props.question} description="" />
-        <div className="container-fluid p-4">
-        <div className="col-10 pb-4">
-            {/* <span class="e2215_715">Name * </span> */}
-            <input
-              className="form-control "
-              value={doc.company_name}
-              label="Email"
-              type="text"
-              id="company_name"
-              onChange={handleInputChange}
-            ></input>
-          </div>
+        <Title_002 size={props.fontsize} content={props.question} description={props.description} />
+        <div className="container-fluid">
+
+
+        <div className="form-check ">
+          <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+          <label className="form-check-label" for="flexRadioDefault1">
+          Freizeitausgleich
+          </label>
+        </div>
+        <div className="form-check p-4">
+          <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+          <label className="form-check-label" for="flexRadioDefault2">
+          Zusätzliche Vergütung
+          </label>
+        </div>
+        <div className="form-check ">
+          <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+          <label className="form-check-label" for="flexRadioDefault2">
+          Keine Regelung
+          </label>
+        </div>
 
 
         </div>
-        <GoNext step={props.next} />
 
+       
+        <GoNext step={props.next} />
 
 
       </form>
@@ -77,4 +84,4 @@ const Funnel0011 = (props) => {
   );
 };
 
-export default Funnel0011;
+export default Funnel0012;

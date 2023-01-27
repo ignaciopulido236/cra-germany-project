@@ -54,7 +54,7 @@ const Funnel0010 = (props) => {
         <div className="container-fluid">
 
           <div class="form-outline">
-          <label class="form-label" for="typeNumber">Workinghours</label>
+          <label class="form-label" for="typeNumber"> {props.buddy}</label>
             <input type="number" id="typeNumber" class="form-control" />
             
           </div>

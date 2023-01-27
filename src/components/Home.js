@@ -31,11 +31,10 @@ const Home = () => {
                 <img className="align-middle mx-auto my-auto" src={group_48} alt="group_48 Logo" style={{ maxheight: "380px", margin: "20px" }} />
               </div>
             </div>
-            <div className=" offset-2 col-10 e2215_779 row" style={{ marginTop: "minmax(auto,40px)" }}> UG Gesellschaftervertrag erstellen. </div>
+            <div className=" offset-2 col-10 e2215_779 row" style={{ marginTop: "minmax(auto,40px)" }}> Werkstudentenvertrag erstellen.  </div>
 
             <div className="offset-2 col-10 e2215_780">
-              In wenigen Schritten helfen wir Ihnen einen Gesellschaftervertrag zu
-              erstellen.
+              In wenigen Schritten helfen wir Ihnen einen Werkstudentenvertrag zu erstellen.
             </div>
             <Link className="mt-5 mb-3 offset-2 btn btn-primary e2215_814" to="/new">
               STARTEN
