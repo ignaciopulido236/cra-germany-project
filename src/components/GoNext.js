@@ -11,6 +11,15 @@ const GoNext = (props) => {
         // Add your form navigation logic here
     }
 
+    // const handleSubmit = async (e,step) => {
+    //     e.preventDefault();
+        
+    //     go_to_form(step)
+    
+    //     // await CompanyServer.updateCompany(params.id, doc);
+    //     //
+    //   };
+
     return (
         <div className="container-fluid">
             <button className="e2215_711 offset-0 col-4" type="submit">WEITER</button>

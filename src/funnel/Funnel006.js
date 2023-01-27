@@ -34,7 +34,6 @@ const Funnel001 = (props) => {
       <Title_001 content="Anteil erster Gesellschafter" description="  Bitte geben Sie den Anteil des zweiten Gesellschafters am Gesellschaftskapital an."></Title_001>
 
   
-
         <div className="container-fluid">
           <input
             className="form-control"

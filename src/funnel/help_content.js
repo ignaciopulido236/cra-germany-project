@@ -1,11 +1,33 @@
 export const help = {
-    help_01:
-        '"Bitte geben Sie den Namen der Gesellschaft ohne Rechtsformzusatz, d. h. ohne den Zusatz "UG (haftungsbeschränkt)" an. Dieser wird im Vertrag automatisch dem Namen hinzugefügt. Möglich sind Sach- und Fantasienamen wie z. B. "Maier Muffins". Für weitere Informationen klicken Sie bitte auf "Das heißt genau."',
-        help_02: "Dieser Gegenstand der Gesellschaft erscheint unmittelbar im Handelsregister. Er sollte vergleichsweise weit gewählt werden, weil Änderungen des Gegenstandes notariell beurkundet werden müssen.        ",
-        help_03: "Dieser Vertrag ist für zwei bis fünf Gesellschafter entwickelt worden. Sollten Sie als Alleingesellschafter eine Gesellschaft mit beschränkter Haftung gründen wollen, könnte es sich auch im Kosteninteresse anbieten, nach dem so genannten Musterprotokoll gemäß der Anlage zu § 2 Abs. 1a GmbHG zu gründen.",
-        help_04: '"Bitte geben Sie den vollständigen Namen des Gesellschafters ein. "Erster Gesellschafter" meint hier nur der Erste, dessen Daten Sie eingeben. Es geht also nicht um die Stellung der Gesellschafter zueinander. Unter "Wohnort" ist nur der Ort und nicht die vollständige Adresse des Gesellschafters zu verstehen. Dementsprechend geben Sie etwa nur "Berlin" oder "München" ein."',
-        help_05: '"Bitte geben Sie den vollständigen Namen des Gesellschafters ein. Unter "Wohnort" ist nur der Ort und nicht die vollständige Adresse des Gesellschafters zu verstehen. Dementsprechend geben Sie etwa "Berlin" oder "München" ein."',
-        help_06: "Einerseits sollten Entscheidungen der Gesellschafterversammlung nicht durch eine Minderheit der Gesellschafter (nach dem Nennbetrag ihrer Geschäftsanteile und soweit wirksam vertreten) gefasst werden. Andererseits muss es nicht zwingend erforderlich sein, dass alle Gesellschafter einvernehmlich eine Entscheidung treffen.",
+    help_01: "ETAPA 1",
+    help_02: "ETAPA 2",
+    help_03: "ETAPA 3",
+    help_04: "ETAPA 4",
+    help_05: "ETAPA 5",
+    help_06: "ETAPA 6",
+    help_07: "ETAPA 7",
+    help_08: "ETAPA 8",
+    help_09: "ETAPA 9",
+    help_010: "ETAPA 10",
+    help_011: "ETAPA 11",
+    help_012: "ETAPA 12",
+    help_013: "ETAPA 13",
+    help_014: "ETAPA 14",
+    help_015: "ETAPA 15",
+
     
 
 };
+
+export const questions = {
+    q1: 'Wann soll die Tätigkeit des Studenten beginnen?' ,
+    q2: 'Wie viele Stunden soll der Student wöchentlich arbeiten?',
+    q3: 'Wann soll die Tätigkeit des Studenten enden?',
+    q4: 'Nennen Sie bitte die Berufsbeschreibung des Studenten oder die Position, die der Student besetzen soll.',
+    q5: 'An welchem Ort soll der Student tätig werden?',
+    q6: 'Wollen Sie in dem Arbeitsvertrag vorsehen, dass Sie den Studenten auch an einem anderen Arbeitsort innerhalb Deutschlands einsetzen können?',
+    q7: 'An wie vielen Tagen soll der Student wöchentlich regelmäßig arbeiten?',
+    q8: 'Wollen Sie den Studenten dabei an Sonn- und Feiertagen beschäftigen, weil Ihr Unternehmen zur Sonn- und Feiertagsarbeit berechtigt ist?',
+    q9: 'OJO'
+
+}

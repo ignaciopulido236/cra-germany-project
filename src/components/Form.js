@@ -42,7 +42,16 @@ import Lateral007 from "../funnel/Lateral007";
 import SideBar from "./sidebar/SideBar";
 import PhoneInfo from "./navbar/PhoneInfo";
 
-import { help } from "../funnel/help_content";
+import Funnel000Template from "../funnel/Funnel000Template";
+import Funnel0008 from "../funnel/Funnel0008";
+
+import Funnel0009 from "../funnel/Funnel0009";
+import Funnel0010 from "../funnel/Funnel0010";
+
+import Funnel0011 from "../funnel/Funnel0011";
+
+
+import { help, questions } from "../funnel/help_content";
 
 
 let document_token = ""; //Global Variable
@@ -139,7 +148,7 @@ const CompanyForm = () => {
       console.log(params.id);
       /*NewRecord()*/
     }
-    if (Stage == 7) {
+    if (Stage == 999) {
       //setLinkId(get_link(token_param))
       //setLinkId(get_link(token_param).message)
       async function example() {
@@ -187,103 +196,117 @@ const CompanyForm = () => {
           <div id="form-container" className="row" >
 
             <div id="stage_1" className="stages">
-              <Funnel001
-                cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
-                Onsubmit={company}
+              <Funnel0009
+                next="2" previous="1" question={questions.q1}
               />
+
             </div>
             <div id="stage_2" className="stages">
-              <Funnel002 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
-            </div>            
-          <div id="stage_3" className="stages">
-            <Funnel003 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
-          </div>
-          
-          <div id="stage_4" className="stages">
-            <Funnel004 title="Daten des ersten Gesellschafters" next_stage="401" cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
-          </div>
-       
-          <div id="stage_401" className="stages">
-            <Funnel004 next_stage="5" title="Daten des zweiten Gesellschafters"
-              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
-            />
-          </div>
-          <div id="stage_5" className="stages">
-            <Funnel005 next_stage="6" description="Bitte geben Sie den Betrag ein, über welche die Gesellschaft verfügen soll." title="Kapital der Gesellschaft" cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
-          </div>
-           
-          <div id="stage_6" className="stages">
-            <Funnel006 cambiarMensaje={(stage_000) => padreAHijo(stage_000)} />
-          </div>
-          <div id="stage_6001" className="stages">
-            <Funnel006001
-              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
-            />
-          </div>
-          <div id="stage_6002" className="stages">
-            <Funnel006002
-              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
-            />
-          </div>
-          <div id="stage_6003" className="stages">
-            <Funnel006003
-              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
-            />
-          </div>
-          <div id="stage_6004" className="stages">
-            <Funnel006004
-              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
-            />
-          </div>
-          <div id="stage_7" className="stages">
-            <Funnel007
-              cambiarMensaje={(stage_000) => padreAHijo(stage_000)}
-              name={document_token}
-            />
-          </div> 
+              <Funnel0010 fontsize="30px" next="3" previous="1" question={questions.q2} />
+            </div>
+            <div id="stage_3" className="stages">
+              <Funnel0009
+                next="4" previous="2" question={questions.q3}
+              />
+            </div>
+
+            <div id="stage_4" className="stages">
+              <Funnel0011 next="5" previous="3" question={questions.q4} />
+            </div>
+
+            <div id="stage_5" className="stages">
+              <Funnel0011 next="6" previous="4" question={questions.q5} />
+            </div>
+
+            <div id="stage_6" className="stages">
+              <Funnel0008 next="7" previous="5" question={questions.q6} />
+            </div>
+
+            <div id="stage_7" className="stages">
+              <Funnel0011 next="8" previous="6" question={questions.q7} />
+            </div>
+            <div id="stage_8" className="stages">
+              <Funnel0008 next="9" previous="7" question={questions.q8} />
+            </div>
+            <div id="stage_9" className="stages">
+              <Funnel0011 next="10" previous="8" question={questions.q9} />
+            </div>
+            <div id="stage_10" className="stages">
+              <Funnel0011 next="11" previous="9" question={questions.q10} />
+            </div>
+            <div id="stage_11" className="stages">
+              <Funnel0011 next="12" previous="10" question={questions.q11} />
+            </div>
+            <div id="stage_12" className="stages">
+              <Funnel0011 next="13" previous="11" question={questions.q12} />
+            </div>
+
+
+
+
+
+
+
+
+
           </div>
           <div className="help-container">
             <div id="lateral_stage_1" className="stages">
-             
+
               <Lateral001 content={help.help_01} />
             </div>
-        
+
             <div id="lateral_stage_2" className="stages">
-            <Lateral001 content={help.help_02} />
+              <Lateral001 content={help.help_02} />
             </div>
-               
+
             <div id="lateral_stage_3" className="stages">
-            <Lateral001 content={help.help_03} />
+              <Lateral001 content={help.help_03} />
             </div>
-         
+
             <div id="lateral_stage_4" className="stages">
-            <Lateral001 content={help.help_04} />
+              <Lateral001 content={help.help_04} />
             </div>
-             
+
             <div id="lateral_stage_401" className="stages">
-            <Lateral001 content={help.help_04} />
+              <Lateral001 content={help.help_04} />
             </div>
             <div id="lateral_stage_5" className="stages">
-            <Lateral001 content={help.help_05} />
+              <Lateral001 content={help.help_05} />
             </div>
             <div id="lateral_stage_6" className="stages">
-            <Lateral001 content={help.help_06} />
-            </div>
-            <div id="lateral_stage_6001" className="stages">
-            <Lateral001 content={help.help_06} />
-            </div>
-            <div id="lateral_stage_6002" className="stages">
-            <Lateral001 content={help.help_06} />
-            </div>
-            <div id="lateral_stage_6003" className="stages">
-            <Lateral001 content={help.help_06} />
-            </div>
-            <div id="lateral_stage_6004" className="stages">
-            <Lateral001 content={help.help_06} />
+              <Lateral001 content={help.help_06} />
             </div>
             <div id="lateral_stage_7" className="stages">
-              <Lateral007 />
+              <Lateral001 content={help.help_07} />
             </div>
+
+            <div id="lateral_stage_8" className="stages">
+              <Lateral001 content={help.help_07} />
+            </div>
+            <div id="lateral_stage_9" className="stages">
+              <Lateral001 content={help.help_08} />
+            </div>
+            <div id="lateral_stage_10" className="stages">
+              <Lateral001 content={help.help_09} />
+            </div>
+            <div id="lateral_stage_11" className="stages">
+              <Lateral001 content={help.help_10} />
+            </div>
+            <div id="lateral_stage_12" className="stages">
+              <Lateral001 content={help.help_11} />
+            </div>
+            <div id="lateral_stage_13" className="stages">
+              <Lateral001 content={help.help_12} />
+            </div>
+            <div id="lateral_stage_14" className="stages">
+              <Lateral001 content={help.help_13} />
+            </div>
+
+
+
+
+
           </div>
         </div>
       </div>
