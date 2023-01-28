@@ -1,5 +1,7 @@
-const API_URL = "http://127.0.0.1:8000/api/documents/";
-const API_URL_W = "http://127.0.0.1:8000/api/send-webhook";
+//const API_URL = "http://127.0.0.1:8000/api/documents/";
+//const API_URL_W = "http://127.0.0.1:8000/api/send-webhook";
+const API_URL = "https://werkstudentenvertrag.onrender.com/api/documents"
+const API_URL_W = "https://werkstudentenvertrag.onrender.com/api/send-webhook"
 
 export const listCompanies = async () => {
     return await fetch(API_URL);
