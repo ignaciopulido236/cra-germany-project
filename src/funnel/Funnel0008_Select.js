@@ -30,9 +30,7 @@ const Funnel00081 = (props) => {
     setSelectedValue(event.target.value);
   }
 
-  const [show, setShow] = useState(false);
-  // const alert_funnel_001 = show ? "show" : "hide";
-  // const { cambiarMensaje, Onsubmit } = props;
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,18 +41,9 @@ const Funnel00081 = (props) => {
       const step = e.currentTarget.getAttribute('step');
 
       go_to_form(e, step)
-    }else{
-      alert('')
     }
 
-    
-
-    //   // await CompanyServer.updateCompany(params.id, doc);
-    //   //
-    // };
-    // const handleInputChange = (e) => {
-    //   //console.log(e.target.value);
-    //   setDocument({ ...doc, [e.target.id]: e.target.value });
+  
   };
 
 
@@ -80,8 +69,6 @@ const Funnel00081 = (props) => {
               </label>
             </div>
           </div>
-
-
         </div>
         <GoNext step={props.next} />
 

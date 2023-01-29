@@ -17,19 +17,10 @@ import Title_002 from "./Title_002";
 const Funnel0008 = (props) => {
   const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
 
-  // const params = useParams();
 
-  // const go_to_form = async (e, stage_number) => {
-  //   e.preventDefault();
-  //   cambiarMensaje(stage_number);
-  // };
   const [radioButton, setRadioButton] = React.useState(props.question_value ? "true" : "false");
 
-  // if(!props.question_value){
-  //   setRadioButton(props.question_value)
-  // }const YesNoRadioButtons = () => {
-
-
+ 
 
   const handleRadioButtonChange = (event) => {
     setDocument({ ...doc, [event.target.id]: event.target.value });
@@ -48,12 +39,7 @@ const Funnel0008 = (props) => {
     const step = e.currentTarget.getAttribute('step')
     go_to_form(e, step)
 
-    //   // await CompanyServer.updateCompany(params.id, doc);
-    //   //
-    // };
-    // const handleInputChange = (e) => {
-    //   //console.log(e.target.value);
-    //   setDocument({ ...doc, [e.target.id]: e.target.value });
+
   };
 
 

@@ -41,7 +41,6 @@ const Funnel0010SelectAndNumber = (props) => {
   };
   useEffect(() => {
     setSelect(props.question_value_1);
-    alert(select)
   }, [props.question_value_1]);
 
   return (
@@ -60,6 +59,8 @@ const Funnel0010SelectAndNumber = (props) => {
               value={select}
               class="form-select"
               aria-label="Default select example"
+              onChange={handleInputChange}
+              id={props.question_id_1}
             >
               <option>Open this select menu</option>
               <option>Pro Stunde</option>
@@ -70,10 +71,10 @@ const Funnel0010SelectAndNumber = (props) => {
               {props.buddy}
             </label>
             <input
+              id={props.question_id_2}
               onChange={handleInputChange}
               type="number"
-              id={props.question_id}
-              value={props.question_value}
+              value={props.question_value_2}
               className="form-control"
             />
           </div>

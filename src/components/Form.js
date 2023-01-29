@@ -54,6 +54,8 @@ import { help, questions } from "../funnel/help_content";
 import Funnel0012 from "../funnel/Funnel0012";
 import Funnel00081 from "../funnel/Funnel0008_Select";
 
+import Funnel0010MultipleSelect from "../funnel/Funnel0010MultripleSelect";
+
 import Funnel0010SelectAndNumber from "../funnel/Funnel0010_Select_and_Number";
 
 let document_token = ""; //Global Variable
@@ -309,15 +311,17 @@ const CompanyForm = () => {
                 previous="10"
                 question={questions.q11}
                 question_id="boolean_q10"
-                question_value_1={doc.boolean_q10}
+                question_value_1={doc.boolean_q10}      
               />
             </div>
             <div id="stage_12" className="stages">
-              <Funnel0012
+              <Funnel0010MultipleSelect
                 fontsize="23px"
                 next="13"
                 previous="11"
                 question={questions.q12}
+                question_id="BezahlungMonat"
+                question_value='Keine Regelung'  //add to database  
               />
             </div>
             <div id="stage_13" className="stages">
