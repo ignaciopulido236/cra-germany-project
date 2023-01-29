@@ -16,7 +16,7 @@ import GoBackButton from "../components/GoBackButton";
 
 
 const Funnel0010 = (props) => {
-  const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
+  const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form,handleInputChange } = useContext(StageContext);
 
   const params = useParams();
 
@@ -55,7 +55,7 @@ const Funnel0010 = (props) => {
 
           <div className="form-outline">
           <label className="form-label" for="typeNumber"> {props.buddy}</label>
-            <input type="number" id="typeNumber" className="form-control" />
+            <input  onChange={handleInputChange} type="number" id={props.question_id} value={props.question_value} className="form-control" />
             
           </div>
 

@@ -39,10 +39,10 @@
   letter-spacing: 0;
 }
 
-#company_name {
-  /*width: 537px;*/
+.single_string_input {
+
   height: 66px;
- /* position: absolute;*/
+
   
 }
 

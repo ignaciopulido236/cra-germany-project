@@ -14,8 +14,8 @@ import GoNext from "../components/GoNext";
 import GoBackButton from "../components/GoBackButton";
 import Title_002 from "./Title_002";
 
-const Funnel0009 = (props) => {
-  const {handleInputChange, globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
+const Funnel0011 = (props) => {
+  const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
 
   const params = useParams();
 
@@ -42,28 +42,30 @@ const Funnel0009 = (props) => {
     //   setDocument({ ...doc, [e.target.id]: e.target.value });
   };
 
-
+  const handleInputChange = (e) => {
+    //console.log(e.target.value);
+    setDocument({ ...doc, [e.target.id]: e.target.value });
+  };
  
 
   return (
     <div className="container-fluid" >
       <form id="form-v0010" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" step={props.next}>
         <GoBackButton step={props.previous} />
-        <Title_002 size={props.size} content={props.question} description="" />
+        <Title_002 content={props.question} description="" />
         <div className="container-fluid p-4">
-        <div className="container-fluid">
+        <div className="col-10 pb-4">
+            {/* <span class="e2215_715">Name * </span> */}
             <input
-              className="form-control col-8 row mb-2"
-              /*id="funnel_Geburtsdatum"*/
-              // placeholder=""
-              // first_shareholder_birthday
-          
-              type="date"
-              id={props.question_value}
-              // value={doc.first_shareholder_birthday}
+              className="form-control single_string_input "
+              value={props.question_value}
+              label="Email"
+              type="text"
+              id={props.question_id}
               onChange={handleInputChange}
-            />
+            ></input>
           </div>
+
 
         </div>
         <GoNext step={props.next} />
@@ -75,4 +77,4 @@ const Funnel0009 = (props) => {
   );
 };
 
-export default Funnel0009;
+export default Funnel0011;

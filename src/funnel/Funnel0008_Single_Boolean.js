@@ -17,22 +17,27 @@ import Title_002 from "./Title_002";
 const Funnel0008 = (props) => {
   const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
 
-  const params = useParams();
+  // const params = useParams();
 
   // const go_to_form = async (e, stage_number) => {
   //   e.preventDefault();
   //   cambiarMensaje(stage_number);
   // };
+  const [radioButton, setRadioButton] = React.useState(props.question_value);
 
 
-  const [show, setShow] = useState(false);
+  const handleRadioButtonChange  = (event) =>{
+    setRadioButton(event.target.value)
+    console.log(props.question_value)
+  }
+  // const [show, setShow] = useState(false);
   // const alert_funnel_001 = show ? "show" : "hide";
   // const { cambiarMensaje, Onsubmit } = props;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const step=e.currentTarget.getAttribute('step')
-    go_to_form(e,step)
+    const step = e.currentTarget.getAttribute('step')
+    go_to_form(e, step)
 
     //   // await CompanyServer.updateCompany(params.id, doc);
     //   //
@@ -43,7 +48,8 @@ const Funnel0008 = (props) => {
   };
 
 
- 
+
+
 
   return (
     <div className="container-fluid" >
@@ -53,13 +59,13 @@ const Funnel0008 = (props) => {
         <div className="container-fluid p-4">
           <div>
             <div className="form-check p-2">
-              <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+              <input value='true' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={radioButton === 'true'} onChange={handleRadioButtonChange}/>
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Yes
               </label>
             </div>
             <div className="form-check p-2">
-              <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" defaultChecked />
+              <input value='false' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked={radioButton === 'false'} onChange={handleRadioButtonChange}/>
               <label className="form-check-label" htmlFor="flexRadioDefault2">
                 No
               </label>

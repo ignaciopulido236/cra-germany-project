@@ -79,10 +79,10 @@ export function StageContextProvider(props) {
 
 
 
-  // useEffect(() => {
+  useEffect(() => {
     
   
-  //  }, []);
+   }, []);
 
   return (
     <StageContext.Provider value={{handleSubmit, Stage, setStage, globalState, setGlobalState, getCompany, doc, setTokenParam, token_param, setDocument, handleInputChange, CompanyServer, get_link, linkid, setLinkId, go_to_form }}>

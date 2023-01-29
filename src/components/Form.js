@@ -43,12 +43,12 @@ import SideBar from "./sidebar/SideBar";
 import PhoneInfo from "./navbar/PhoneInfo";
 
 import Funnel000Template from "../funnel/Funnel000Template";
-import Funnel0008 from "../funnel/Funnel0008";
+import Funnel0008 from "../funnel/Funnel0008_Single_Boolean";
 
-import Funnel0009 from "../funnel/Funnel0009";
-import Funnel0010 from "../funnel/Funnel0010";
+import Funnel0009 from "../funnel/Funnel0009_Single_Date";
+import Funnel0010 from "../funnel/Funnel0010_Single_Number";
 
-import Funnel0011 from "../funnel/Funnel0011";
+import Funnel0011 from "../funnel/Funnel0011_Single_String";
 
 
 import { help, questions } from "../funnel/help_content";
@@ -139,12 +139,12 @@ const CompanyForm = () => {
   // const [Stage, setStage] = useState(1);
 
   useEffect(() => {
-    // alert(token_param)
+   
     if(!token_param){
 
     }else{
       getCompany(token_param)
-      console.log(doc)
+      console.log(doc.Startdate)
 
     }
     
@@ -230,24 +230,28 @@ const CompanyForm = () => {
 
             </div>
             <div id="stage_2" className="stages">
-              <Funnel0010 buddy="WorkHours" fontsize="30px" next="3" previous="1" question={questions.q2} />
+              <Funnel0010 buddy="WorkHours" fontsize="30px" next="3" previous="1" question={questions.q2}
+              question_id='Workinghours' question_value={doc.Workinghours}
+              />
             </div>
             <div id="stage_3" className="stages">
-              <Funnel0009
+              <Funnel0009 question_id='Enddate' question_value={doc.Enddate}
                 next="4" previous="2" question={questions.q3}
               />
             </div>
 
             <div id="stage_4" className="stages">
-              <Funnel0011 next="5" previous="3" question={questions.q4} />
+              <Funnel0011 next="5" previous="3" question={questions.q4} question_id="WorkingstudentPosition"
+              question_value={doc.WorkingstudentPosition}
+              />
             </div>
 
             <div id="stage_5" className="stages">
-              <Funnel0011 next="6" previous="4" question={questions.q5} />
+              <Funnel0011 next="6" previous="4" question={questions.q5} question_id="OrtArbeitgeber" question_value={doc.OrtArbeitgeber} />
             </div>
 
             <div id="stage_6" className="stages">
-              <Funnel0008 fontsize="30px" next="7" previous="5" question={questions.q6} />
+              <Funnel0008 fontsize="30px" next="7" previous="5" question={questions.q6}  question_id="boolean_q6" question_value={doc.boolean_q6}/>
             </div>
             <div id="stage_7" className="stages">
               <Funnel0011 next="8" previous="6" question={questions.q7} />
