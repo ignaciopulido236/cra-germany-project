@@ -25,10 +25,15 @@ const Funnel0008 = (props) => {
   // };
   const [radioButton, setRadioButton] = React.useState(props.question_value);
 
+  // if(!props.question_value){
+  //   setRadioButton(props.question_value)
+  // }
 
-  const handleRadioButtonChange  = (event) =>{
+
+  const handleRadioButtonChange = (event) => {
+    setDocument({ ...doc, [event.target.id]: event.target.value });
     setRadioButton(event.target.value)
-    console.log(props.question_value)
+
   }
   // const [show, setShow] = useState(false);
   // const alert_funnel_001 = show ? "show" : "hide";
@@ -46,7 +51,7 @@ const Funnel0008 = (props) => {
     //   //console.log(e.target.value);
     //   setDocument({ ...doc, [e.target.id]: e.target.value });
   };
-
+ 
 
 
 
@@ -59,13 +64,13 @@ const Funnel0008 = (props) => {
         <div className="container-fluid p-4">
           <div>
             <div className="form-check p-2">
-              <input value='true' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={radioButton === 'true'} onChange={handleRadioButtonChange}/>
+              <input value={props.question_value} className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={radioButton === 'true'} onChange={handleRadioButtonChange} />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Yes
               </label>
             </div>
             <div className="form-check p-2">
-              <input value='false' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked={radioButton === 'false'} onChange={handleRadioButtonChange}/>
+              <input value={props.question_value} className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked={radioButton === 'false'} onChange={handleRadioButtonChange} />
               <label className="form-check-label" htmlFor="flexRadioDefault2">
                 No
               </label>

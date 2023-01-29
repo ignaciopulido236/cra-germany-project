@@ -204,10 +204,10 @@ const CompanyForm = () => {
 
     // eslint-disable-next-line
   }, [Stage, globalState]);
-  function padreAHijo(stage_000) {
-    console.log(stage_000);
-    setStage(stage_000);
-  }
+  // function padreAHijo(stage_000) {
+  //   console.log(stage_000);
+  //   setStage(stage_000);
+  // }
 
   return (
     <div id="main-grid">
