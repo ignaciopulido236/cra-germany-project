@@ -68,6 +68,7 @@ const CompanyForm = () => {
     get_link,
     token_param,
     setLinkId,
+    doc
   } = useContext(StageContext);
 
   const navigate = useNavigate();
@@ -94,7 +95,7 @@ const CompanyForm = () => {
         if (data.message === "Success") {
           setCompany(initialState);
         }
-        getCompany(data.id);
+        // getCompany(data.id);
         /*navigate("/updateCompany/" + data.id);*/
       }
     } catch (error) {
@@ -138,25 +139,38 @@ const CompanyForm = () => {
   // const [Stage, setStage] = useState(1);
 
   useEffect(() => {
+    // alert(token_param)
+    if(!token_param){
+
+    }else{
+      getCompany(token_param)
+      console.log(doc)
+
+    }
+    
+    
+    
+    // doc=getCompany(token_param)
+  
     const stages = document.getElementsByClassName("stages");
     for (let i = 0; i < stages.length; i++) {
       stages[i].style.visibility = "hidden";
       stages[i].style.display = "none";
     }
-    if (Stage<3 ){
-      setGlobalState(1)  
+    if (Stage < 3) {
+      setGlobalState(1)
     }
-    if (Stage>2 & Stage<11){
-      setGlobalState(2)  
+    if (Stage > 2 & Stage < 11) {
+      setGlobalState(2)
     }
-    if (Stage>10){
-      setGlobalState(3)  
+    if (Stage > 10) {
+      setGlobalState(3)
     }
-    if (stages>10) {
+    if (stages > 10) {
       setGlobalState(4)
     }
     if (params.id) {
-      getCompany(params.id);
+      // getCompany(params.id);
       setTokenParam(params.id);
     } else {
       console.log(params.id);
@@ -211,7 +225,7 @@ const CompanyForm = () => {
 
             <div id="stage_1" className="stages">
               <Funnel0009
-                next="2" previous="1" question={questions.q1}
+                next="2" previous="1" question={questions.q1} question_id='Startdate' question_value={doc.Startdate}
               />
 
             </div>
@@ -220,7 +234,7 @@ const CompanyForm = () => {
             </div>
             <div id="stage_3" className="stages">
               <Funnel0009
-                next="4"  previous="2" question={questions.q3}
+                next="4" previous="2" question={questions.q3}
               />
             </div>
 
@@ -263,13 +277,13 @@ const CompanyForm = () => {
               <Funnel0010 buddy="Hours" fontsize="25px" next="15" previous="14" question={questions.q1401} />
             </div>
             <div id="stage_15" className="stages">
-              <Funnel0008  fontsize="20px" next="16" previous="14" question={questions.q15} />
+              <Funnel0008 fontsize="20px" next="16" previous="14" question={questions.q15} />
             </div>
             <div id="stage_16" className="stages">
               <Funnel0008 fontsize="22px" next="17" previous="15" question={questions.q16} />
             </div>
             <div id="stage_17" className="stages">
-              <Funnel0008 fontsize="25px"  next="18" previous="16" question={questions.q17} />
+              <Funnel0008 fontsize="25px" next="18" previous="16" question={questions.q17} />
             </div>
             <div id="stage_18" className="stages">
               <Funnel0008 fontsize="25px" next="19" previous="17" question={questions.q18} />

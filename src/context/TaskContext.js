@@ -14,15 +14,19 @@ export function StageContextProvider(props) {
   const document_init = { funnel_name: "", funnel_Sitz: "sitz*" };
   const [doc, setDocument] = useState(document_init);
 
-  const getCompany = async (companyId) => {
+  const getCompany = async (token_param) => {
     try {
-      const res = await CompanyServer.getCompany(companyId);
+      const res = await CompanyServer.getCompany(token_param);
       const data = await res.json();
       //const { company_name } = data.document.company_name;
-      console.log(data.document);
+      // console.log(data.document);
+      // console.log(data)
+      // console.log('ESTO')
+      // console.log(data.documents[0])
+      // console.log('esto')
 
-      setDocument({ ...data.document });
-      console.log(doc.id)
+      setDocument({ ...data.documents[0] });
+    
     } catch (error) {
       console.log(error);
     }
@@ -75,7 +79,10 @@ export function StageContextProvider(props) {
 
 
 
-  useEffect(() => { }, [globalState]);
+  // useEffect(() => {
+    
+  
+  //  }, []);
 
   return (
     <StageContext.Provider value={{handleSubmit, Stage, setStage, globalState, setGlobalState, getCompany, doc, setTokenParam, token_param, setDocument, handleInputChange, CompanyServer, get_link, linkid, setLinkId, go_to_form }}>

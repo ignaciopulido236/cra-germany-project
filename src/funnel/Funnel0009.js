@@ -55,11 +55,11 @@ const Funnel0009 = (props) => {
             <input
               className="form-control col-8 row mb-2"
               /*id="funnel_Geburtsdatum"*/
-              placeholder="Geburtsdatum"
-              first_shareholder_birthday
+              // placeholder=""
+              // first_shareholder_birthday
           
               type="date"
-              id="first_shareholder_birthday"
+              id={props.question_value}
               // value={doc.first_shareholder_birthday}
               onChange={handleInputChange}
             />

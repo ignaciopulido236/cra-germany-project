@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -21,13 +21,13 @@ import {StageContextProvider } from './context/TaskContext'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StageContextProvider>
-  <BrowserRouter>      
+  <HashRouter>      
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/gesellschaftsvertrag-ug/:id" element={<Form />}></Route>
       <Route path="/new" element={<CreateRecord />}></Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
   </StageContextProvider>
 
 );

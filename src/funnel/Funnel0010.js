@@ -53,9 +53,9 @@ const Funnel0010 = (props) => {
         <Title_002 size={props.fontsize} content={props.question} />
         <div className="container-fluid">
 
-          <div class="form-outline">
-          <label class="form-label" for="typeNumber"> {props.buddy}</label>
-            <input type="number" id="typeNumber" class="form-control" />
+          <div className="form-outline">
+          <label className="form-label" for="typeNumber"> {props.buddy}</label>
+            <input type="number" id="typeNumber" className="form-control" />
             
           </div>
 
