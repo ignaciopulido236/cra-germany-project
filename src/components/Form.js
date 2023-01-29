@@ -50,17 +50,18 @@ import Funnel0010 from "../funnel/Funnel0010_Single_Number";
 
 import Funnel0011 from "../funnel/Funnel0011_Single_String";
 
-
 import { help, questions } from "../funnel/help_content";
 import Funnel0012 from "../funnel/Funnel0012";
 import Funnel00081 from "../funnel/Funnel0008_Select";
 
+import Funnel0010SelectAndNumber from "../funnel/Funnel0010_Select_and_Number";
 
 let document_token = ""; //Global Variable
 
 const CompanyForm = () => {
   const {
-    Stage, setStage,
+    Stage,
+    setStage,
     globalState,
     setGlobalState,
     setTokenParam,
@@ -68,7 +69,7 @@ const CompanyForm = () => {
     get_link,
     token_param,
     setLinkId,
-    doc
+    doc,
   } = useContext(StageContext);
 
   const navigate = useNavigate();
@@ -139,35 +140,30 @@ const CompanyForm = () => {
   // const [Stage, setStage] = useState(1);
 
   useEffect(() => {
-   
-    if(!token_param){
-
-    }else{
-      getCompany(token_param)
-      console.log(doc.Startdate)
-
+    if (!token_param) {
+    } else {
+      getCompany(token_param);
+      console.log(doc);
     }
-    
-    
-    
+
     // doc=getCompany(token_param)
-  
+
     const stages = document.getElementsByClassName("stages");
     for (let i = 0; i < stages.length; i++) {
       stages[i].style.visibility = "hidden";
       stages[i].style.display = "none";
     }
     if (Stage < 3) {
-      setGlobalState(1)
+      setGlobalState(1);
     }
-    if (Stage > 2 & Stage < 11) {
-      setGlobalState(2)
+    if ((Stage > 2) & (Stage < 11)) {
+      setGlobalState(2);
     }
     if (Stage > 10) {
-      setGlobalState(3)
+      setGlobalState(3);
     }
     if (stages > 10) {
-      setGlobalState(4)
+      setGlobalState(4);
     }
     if (params.id) {
       // getCompany(params.id);
@@ -187,10 +183,9 @@ const CompanyForm = () => {
           console.log(error);
         }
         console.log(message.message);
-        setLinkId(message.message)
+        setLinkId(message.message);
       }
       example();
-
 
       //setLinkId(('1DopqbC_SvczOoERGlLw1Jq0RlwPeoGO_OR4wj-eHtNI'))
     }
@@ -216,48 +211,90 @@ const CompanyForm = () => {
         <PhoneInfo />
       </div>
       <div id="sidebar-container">
-        <SideBar stage={{ stage: '3' }} />
+        <SideBar stage={{ stage: "3" }} />
       </div>
       <div className="secondary-grid">
         <label className="hide_under_992px"> </label>
-        <div id="body-container" >
-          <div id="form-container" className="row" >
-
+        <div id="body-container">
+          <div id="form-container" className="row">
             <div id="stage_1" className="stages">
               <Funnel0009
-                next="2" previous="1" question={questions.q1} question_id='Startdate' question_value={doc.Startdate}
+                next="2"
+                previous="1"
+                question={questions.q1}
+                question_id="Startdate"
+                question_value={doc.Startdate}
               />
-
             </div>
             <div id="stage_2" className="stages">
-              <Funnel0010 buddy="WorkHours" fontsize="30px" next="3" previous="1" question={questions.q2}
-              question_id='Workinghours' question_value={doc.Workinghours}
+              <Funnel0010
+                buddy="WorkHours"
+                fontsize="30px"
+                next="3"
+                previous="1"
+                question={questions.q2}
+                question_id="Workinghours"
+                question_value={doc.Workinghours}
               />
             </div>
             <div id="stage_3" className="stages">
-              <Funnel0009 question_id='Enddate' question_value={doc.Enddate}
-                next="4" previous="2" question={questions.q3}
+              <Funnel0009
+                question_id="Enddate"
+                question_value={doc.Enddate}
+                next="4"
+                previous="2"
+                question={questions.q3}
               />
             </div>
 
             <div id="stage_4" className="stages">
-              <Funnel0011 next="5" previous="3" question={questions.q4} question_id="WorkingstudentPosition"
-              question_value={doc.WorkingstudentPosition}
+              <Funnel0011
+                next="5"
+                previous="3"
+                question={questions.q4}
+                question_id="WorkingstudentPosition"
+                question_value={doc.WorkingstudentPosition}
               />
             </div>
 
             <div id="stage_5" className="stages">
-              <Funnel0011 next="6" previous="4" question={questions.q5} question_id="OrtArbeitgeber" question_value={doc.OrtArbeitgeber} />
+              <Funnel0011
+                next="6"
+                previous="4"
+                question={questions.q5}
+                question_id="OrtArbeitgeber"
+                question_value={doc.OrtArbeitgeber}
+              />
             </div>
 
             <div id="stage_6" className="stages">
-              <Funnel0008 fontsize="30px" next="7" previous="5" question={questions.q6}  question_id="boolean_q6" question_value={doc.boolean_q6}/>
+              <Funnel0008
+                fontsize="30px"
+                next="7"
+                previous="5"
+                question={questions.q6}
+                question_id="boolean_q6"
+                question_value={doc.boolean_q6}
+              />
             </div>
             <div id="stage_7" className="stages">
-              <Funnel0011 next="8" previous="6" question={questions.q7} />
+              <Funnel0011
+                next="8"
+                previous="6"
+                question={questions.q7}
+                question_id="ArbeitszeitTage"
+                question_value_1='Pro Stunde'
+              />
             </div>
             <div id="stage_8" className="stages">
-              <Funnel0008 fontsize="30px" next="10" previous="7" question={questions.q8} />
+              <Funnel0008
+                fontsize="30px"
+                next="10"
+                previous="7"
+                question={questions.q8}
+                question_id="boolean_q8"
+                question_value={doc.boolean_q8}
+              />
             </div>
             {/* <div id="stage_9" className="stages">
               <Funnel000Template next="10" previous="8" question={questions.q9} />
@@ -266,37 +303,90 @@ const CompanyForm = () => {
               <Funnel0008 next="11" previous="8" question={questions.q10} />
             </div>
             <div id="stage_11" className="stages">
-              <Funnel0009 fontsize="25px" next="12" previous="10" question={questions.q11} />
+              <Funnel0010SelectAndNumber
+                fontsize="25px"
+                next="12"
+                previous="10"
+                question={questions.q11}
+                question_id="boolean_q10"
+                question_value_1={doc.boolean_q10}
+              />
             </div>
             <div id="stage_12" className="stages">
-              <Funnel0012 fontsize="23px" next="13" previous="11" question={questions.q12} />
+              <Funnel0012
+                fontsize="23px"
+                next="13"
+                previous="11"
+                question={questions.q12}
+              />
             </div>
             <div id="stage_13" className="stages">
-              <Funnel0008 fontsize="23px" next="14" previous="12" question={questions.q13} />
+              <Funnel0008
+                fontsize="23px"
+                next="14"
+                previous="12"
+                question={questions.q13}
+              />
             </div>
             <div id="stage_14" className="stages">
-              <Funnel00081 fontsize="25px" next="15" previous="13" question={questions.q14} />
+              <Funnel00081
+                fontsize="25px"
+                next="15"
+                previous="13"
+                question={questions.q14}
+              />
             </div>
             <div id="stage_1401" className="stages">
-              <Funnel0010 buddy="Hours" fontsize="25px" next="15" previous="14" question={questions.q1401} />
+              <Funnel0010
+                buddy="Hours"
+                fontsize="25px"
+                next="15"
+                previous="14"
+                question={questions.q1401}
+              />
             </div>
             <div id="stage_15" className="stages">
-              <Funnel0008 fontsize="20px" next="16" previous="14" question={questions.q15} />
+              <Funnel0008
+                fontsize="20px"
+                next="16"
+                previous="14"
+                question={questions.q15}
+              />
             </div>
             <div id="stage_16" className="stages">
-              <Funnel0008 fontsize="22px" next="17" previous="15" question={questions.q16} />
+              <Funnel0008
+                fontsize="22px"
+                next="17"
+                previous="15"
+                question={questions.q16}
+              />
             </div>
             <div id="stage_17" className="stages">
-              <Funnel0008 fontsize="25px" next="18" previous="16" question={questions.q17} />
+              <Funnel0008
+                fontsize="25px"
+                next="18"
+                previous="16"
+                question={questions.q17}
+              />
             </div>
             <div id="stage_18" className="stages">
-              <Funnel0008 fontsize="25px" next="19" previous="17" question={questions.q18} />
+              <Funnel0008
+                fontsize="25px"
+                next="19"
+                previous="17"
+                question={questions.q18}
+              />
             </div>
             <div id="stage_19" className="stages">
               <Funnel0011 next="20" previous="18" question={questions.q19} />
             </div>
             <div id="stage_20" className="stages">
-              <Funnel0008 fontsize="25px" next="21" previous="19" question={questions.q20} />
+              <Funnel0008
+                fontsize="25px"
+                next="21"
+                previous="19"
+                question={questions.q20}
+              />
             </div>
             <div id="stage_21" className="stages">
               <Funnel003 next="22" previous="20" question={questions.q21} />
@@ -307,19 +397,9 @@ const CompanyForm = () => {
             <div id="stage_23" className="stages">
               <Funnel003 next="24" previous="22" question={questions.q23} />
             </div>
-
-
-
-
-
-
-
-
-
           </div>
           <div className="help-container">
             <div id="lateral_stage_1" className="stages">
-
               <Lateral001 content={help.help_01} />
             </div>
 
@@ -396,11 +476,6 @@ const CompanyForm = () => {
             <div id="lateral_stage_22" className="stages">
               <Lateral001 content={help.help_22} />
             </div>
-
-
-
-
-
           </div>
         </div>
       </div>
