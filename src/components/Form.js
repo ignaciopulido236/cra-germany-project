@@ -168,7 +168,6 @@ const CompanyForm = () => {
       setGlobalState(4);
     }
     if (params.id) {
-      // getCompany(params.id);
       setTokenParam(params.id);
     } else {
       console.log(params.id);
@@ -318,12 +317,35 @@ const CompanyForm = () => {
               <Funnel0010MultipleSelect
                 fontsize="23px"
                 next="13"
+                previous="12"
+                question={questions.q1201}
+                question_id=""
+                question_value=''  //add to database  
+              />
+            </div>
+            <div id="stage_1201" className="stages">
+              <Funnel0008
+                fontsize="23px"
+                next="13"
+                previous="12"
+                question={questions.q1202}
+                question_id=""
+                question_value=''  //add to database  
+              />
+            </div>
+            <div id="stage_1202" className="stages">
+              <Funnel0008
+                fontsize="23px"
+                next="13"
                 previous="11"
                 question={questions.q12}
                 question_id="BezahlungMonat"
                 question_value='Keine Regelung'  //add to database  
               />
             </div>
+
+
+
             <div id="stage_13" className="stages">
               <Funnel0008
                 fontsize="23px"
@@ -479,6 +501,12 @@ const CompanyForm = () => {
             </div>
             <div id="lateral_stage_22" className="stages">
               <Lateral001 content={help.help_22} />
+            </div>
+            <div id="lateral_stage_1201" className="stages">
+              <Lateral001 content={help.help_1201} />
+            </div>
+            <div id="lateral_stage_1202" className="stages">
+              <Lateral001 content={help.help_1202} />
             </div>
           </div>
         </div>

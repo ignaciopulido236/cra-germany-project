@@ -31,8 +31,21 @@ const Funnel0010MultipleSelect = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const step = e.currentTarget.getAttribute("step");
-    go_to_form(e, step);
+    if (radioButton=="Freizeitausgleich"){
+      go_to_form(e, 1201)
+    }else if(radioButton=="Zusätzliche Vergütung"){
+      go_to_form(e, 1202)
+    }  else{
+      const step = e.currentTarget.getAttribute("step");
+      go_to_form(e, step);
+    }
+
+
+
+
+
+    
+    
   };
   const handleChange = (event) => {
     setDocument({ ...doc, [event.target.id]: event.target.value });

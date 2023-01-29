@@ -33,17 +33,13 @@ const Funnel00081 = (props) => {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    
+    e.preventDefault();    
     if (selectedValue=="True"){
       go_to_form(e, 1401)
     }else if(selectedValue=="False"){
       const step = e.currentTarget.getAttribute('step');
-
       go_to_form(e, step)
-    }
-
-  
+    }  
   };
 
 
