@@ -316,50 +316,53 @@ const CompanyForm = () => {
             <div id="stage_12" className="stages">
               <Funnel0010MultipleSelect
                 fontsize="23px"
-                next="13"
-                previous="12"
+                next="14"
+                previous="11"
                 question={questions.q1201}
-                question_id=""
-                question_value=''  //add to database  
+                question_id="bonus_q12"
+                question_value={doc.bonus_q12}  //add to database  
               />
             </div>
             <div id="stage_1201" className="stages">
               <Funnel0008
                 fontsize="23px"
-                next="13"
+                next="14"
                 previous="12"
-                question={questions.q1202}
-                question_id=""
-                question_value=''  //add to database  
+                question={questions.q1201}
+                question_id="boolean_q1201"
+                question_value={doc.boolean_q1201}  //add to database  
               />
             </div>
             <div id="stage_1202" className="stages">
               <Funnel0008
                 fontsize="23px"
-                next="13"
-                previous="11"
-                question={questions.q12}
-                question_id="BezahlungMonat"
-                question_value='Keine Regelung'  //add to database  
+                next="14"
+                previous="12"
+                question={questions.q1202}
+                question_id="boolean_q1202"
+                question_value={doc.boolean_q1202}  //add to database  
               />
             </div>
 
 
 
-            <div id="stage_13" className="stages">
+            {/* <div id="stage_13" className="stages">
               <Funnel0008
                 fontsize="23px"
                 next="14"
                 previous="12"
                 question={questions.q13}
               />
-            </div>
+            </div> */}
             <div id="stage_14" className="stages">
               <Funnel00081
                 fontsize="25px"
                 next="15"
-                previous="13"
+                previous="12"
                 question={questions.q14}
+                question_id='boolean_q14'
+                question_value={doc.boolean_q14}
+
               />
             </div>
             <div id="stage_1401" className="stages">
@@ -367,8 +370,10 @@ const CompanyForm = () => {
                 buddy="Hours"
                 fontsize="25px"
                 next="15"
-                previous="14"
+                previous="13"
                 question={questions.q1401}
+                question_id='Urlaubstage'
+                question_value={doc.Urlaubstage}
               />
             </div>
             <div id="stage_15" className="stages">
@@ -377,6 +382,8 @@ const CompanyForm = () => {
                 next="16"
                 previous="14"
                 question={questions.q15}
+
+
               />
             </div>
             <div id="stage_16" className="stages">
