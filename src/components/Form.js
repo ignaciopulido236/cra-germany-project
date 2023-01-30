@@ -504,8 +504,8 @@ const CompanyForm = () => {
                 headline={headlines.q21}
                 question={questions.q21}
                 question_value={doc.Organization_or_Person}
-                option_1_next="20"
-                option_2_next="1901"
+                option_1_next="22"
+                option_2_next="22"
               />
             </div>
             <div id="stage_22" className="stages">
