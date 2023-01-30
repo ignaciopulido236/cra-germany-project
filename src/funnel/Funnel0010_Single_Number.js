@@ -48,9 +48,9 @@ const Funnel0010 = (props) => {
 
   return (
     <div className="container-fluid" >
-      <form id="form-v0010" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" step={props.next}>
+      <form id="form-v1" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" step={props.next}>
         <GoBackButton step={props.previous} />
-        <Title_002 size={props.fontsize} content={props.question} />
+        <Title_001 size={props.size} headline={props.headline} question={props.question} />
         <div className="container-fluid">
 
           <div className="form-outline">
