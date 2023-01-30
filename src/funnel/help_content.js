@@ -125,6 +125,10 @@ export const desciptions = {
       q1901:
       'Wie viele Monate soll die Kündigungsfrist betragen, die nach dem Vertrag sowohl für den Arbeitgeber als auch für den Studenten gilt?'
   };
+  export const final_view_text = {
+    headline: 'Glückwunsch, Dokument bereit.',
+    subtitle: 'Sie können nun direkt das Dokument Online beglaubigen oder das Dokument herunterladen.'
+  }
 
   export const headlines = {
     q1: "Vertragsbeginn",
@@ -153,7 +157,8 @@ export const desciptions = {
     q20: "Dauer der Kündigungsfrist für den Studenten",
     q21: "Arbeitgeber - Eigenschaft",
     q22: "Arbeitgeber - Details",
-    q23: "Werkstudent - Details"
+    q23: "Werkstudent - Details",
+    q1801:"Dauer der Probezeit"
 
   
   };

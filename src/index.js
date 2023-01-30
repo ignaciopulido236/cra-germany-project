@@ -24,7 +24,7 @@ root.render(
   <HashRouter>      
     <Routes>
       <Route path="/" element={<Home />}></Route>
-      <Route path="/gesellschaftsvertrag-ug/:id" element={<Form />}></Route>
+      <Route path="/werkstudentenvertrag/:id" element={<Form />}></Route>
       <Route path="/new" element={<CreateRecord />}></Route>
     </Routes>
   </HashRouter>

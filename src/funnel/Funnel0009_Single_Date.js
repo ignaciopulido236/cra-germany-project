@@ -15,7 +15,7 @@ import GoBackButton from "../components/GoBackButton";
 import Title_002 from "./Title_002";
 
 const Funnel0009 = (props) => {
-  const {handleInputChange, globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
+  const {handleInputChange, globalState, setGlobalState, getCompany, doc, setDocument, go_to_form,token_param } = useContext(StageContext);
 
   const params = useParams();
 
@@ -33,6 +33,8 @@ const Funnel0009 = (props) => {
     e.preventDefault();
     const step=e.currentTarget.getAttribute('step')
     go_to_form(e,step)
+    await CompanyServer.updateCompany(token_param, doc);
+
 
     //   // await CompanyServer.updateCompany(params.id, doc);
     //   //

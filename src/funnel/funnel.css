@@ -221,22 +221,7 @@
   letter-spacing: 0;
 }
 
-.e2215_718 {
-  background-color: rgba(
-    247.00000047683716,
-    245.00000059604645,
-    242.00000077486038,
-    1
-  );
-  /*width: 307px;*/
-  
-  /*position: absolute;*/
 
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
 .e2215_720 {
   color: rgba(12.085939273238182, 34.87655773758888, 69.0625025331974, 1);
   /*width: 97px;*/
@@ -248,16 +233,7 @@
   font-size: 20px;
   letter-spacing: 0;
 }
-.e2215_722 {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 1110px;
-  top: 220px;
-  background-image: url(images/help_1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .alert_message_001 {
   left: 422px;
@@ -346,7 +322,7 @@
   color: rgba(12.085939273238182, 34.87655773758888, 69.0625025331974, 1);
   width: 200px;
   height: 27px;
-  position: absolute;
+  /* position: absolute; */
   left: 1150px;
   top: 218px;
   font-family: Prata;
@@ -484,4 +460,19 @@
 #form-v0010{
   display: grid;
   grid-template-rows: 1fr 3fr  4fr 1fr  ;
+}
+#form-v1_student{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 5fr 1fr ;
+}
+#lateral_final{
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr 1fr ;
+
+}
+.box_final_style{
+  background-color: #F7F5F2;
+  border-radius:8px;
+  padding : 20px;
+
 }

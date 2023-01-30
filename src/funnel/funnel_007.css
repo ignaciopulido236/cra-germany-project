@@ -846,11 +846,11 @@
 	top:373px;
 }
 .Frame_007{
-	width:645px;
-	height:350px;
+	/* width:645px; */
+	height:600px;
 	/* position:absolute; */
-	left:300px;
-	top:500px;
+	/* left:300px;
+	top:500px; */
 	border-color: black;
 
 	
@@ -879,7 +879,12 @@
 	background-color: #1A5CBF; /* Green */
 
 }
-#funnel-end{
+/* #funnel-end{
 	display: grid;
 	grid-template-rows: 1fr 1fr ;
+  } */
+
+  #final_view-v1{
+	display: grid;
+	grid-template-rows: 0.5fr 0.5fr ;
   }

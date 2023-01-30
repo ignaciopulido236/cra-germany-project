@@ -34,8 +34,9 @@ const Funnel0010 = (props) => {
     e.preventDefault();
     const step = e.currentTarget.getAttribute('step')
     go_to_form(e, step)
+    await CompanyServer.updateCompany(params.id, doc)
 
-    //   // await CompanyServer.updateCompany(params.id, doc);
+    //   // ;
     //   //
     // };
     // const handleInputChange = (e) => {

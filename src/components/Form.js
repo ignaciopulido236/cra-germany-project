@@ -50,7 +50,7 @@ import Funnel0010 from "../funnel/Funnel0010_Single_Number";
 
 import Funnel0011 from "../funnel/Funnel0011_Single_String";
 
-import { help, questions, headlines } from "../funnel/help_content";
+import { help, questions, headlines,final_view_text } from "../funnel/help_content";
 import Funnel0012 from "../funnel/Funnel0012";
 import Funnel00081 from "../funnel/Funnel0008_Select";
 import Funnel0010TwoOptions from "../funnel/Funnel0010TwoOptions";
@@ -58,6 +58,11 @@ import Funnel0010TwoOptions from "../funnel/Funnel0010TwoOptions";
 import Funnel0010MultipleSelect from "../funnel/Funnel0010MultripleSelect";
 
 import Funnel0010SelectAndNumber from "../funnel/Funnel0010_Select_and_Number";
+
+import Q22Empleador from "../funnel/Question22Empleador";
+import Q23Student from "../funnel/Question23Student";
+
+  
 
 let document_token = ""; //Global Variable
 
@@ -174,7 +179,7 @@ const CompanyForm = () => {
       console.log(params.id);
       /*NewRecord()*/
     }
-    if (Stage == 999) {
+    if (Stage == 99) {
       //setLinkId(get_link(token_param))
       //setLinkId(get_link(token_param).message)
       async function example() {
@@ -290,13 +295,13 @@ const CompanyForm = () => {
               />
             </div>
             <div id="stage_7" className="stages">
-              <Funnel0011
+              <Funnel0010
                 next="8"
                 previous="6"
                 headline={headlines.q7}
                 question={questions.q7}
                 question_id="ArbeitszeitTage"
-                question_value_1="Pro Stunde"
+                question_value_1={doc.ArbeitszeitTage}
               />
             </div>
             <div id="stage_8" className="stages">
@@ -319,6 +324,8 @@ const CompanyForm = () => {
                 previous="8"
                 headline={headlines.q10}
                 question={questions.q10}
+                question_id="boolean_q10"
+                question_value={doc.boolean_q10}
               />
             </div>
             <div id="stage_11" className="stages">
@@ -328,8 +335,10 @@ const CompanyForm = () => {
                 previous="10"
                 headline={headlines.q11}
                 question={questions.q11}
-                question_id="boolean_q10"
-                question_value_1={doc.boolean_q10}
+                question_id_1="BezahlungMonat"
+                question_value_1={doc.BezahlungMonat}
+                question_id_2="BrottoGehalt_String"
+                question_value_2={doc.BrottoGehalt_String}
               />
             </div>
             <div id="stage_12" className="stages">
@@ -448,9 +457,10 @@ const CompanyForm = () => {
                 fontsize="25px"
                 next="19"
                 previous="17"
-                question={questions.q1801}
-                question_id="boolean_q17"
-                question_value={doc.boolean_q17}
+                headline={headlines.q18}
+                question={questions.q18}
+                question_id="AnzahlProbezeitWochen"
+                question_value={doc.AnzahlProbezeitWochen}
               />
             </div>
             <div id="stage_19" className="stages">
@@ -487,15 +497,19 @@ const CompanyForm = () => {
               />
             </div>
             <div id="stage_21" className="stages">
-              <Funnel003
+              <Funnel0010TwoOptions
                 next="22"
-                previous="20"
+                previous="18"
+                options={["Organisation", "Person"]}
                 headline={headlines.q21}
                 question={questions.q21}
+                question_value={doc.Organization_or_Person}
+                option_1_next="20"
+                option_2_next="1901"
               />
             </div>
             <div id="stage_22" className="stages">
-              <Funnel0010
+              <Q22Empleador
                 next="23"
                 previous="21"
                 headline={headlines.q22}
@@ -503,11 +517,19 @@ const CompanyForm = () => {
               />
             </div>
             <div id="stage_23" className="stages">
-              <Funnel003
-                next="24"
+              <Q23Student
+                next="23"
                 previous="22"
                 headline={headlines.q23}
                 question={questions.q23}
+              />
+            </div>
+            <div id="stage_99" className="stages">
+              <Funnel007
+                // next="23"
+                previous="23"
+                headline={final_view_text.headline}
+                question={final_view_text.subtitle}
               />
             </div>
           </div>
@@ -594,6 +616,9 @@ const CompanyForm = () => {
             </div>
             <div id="lateral_stage_1202" className="stages">
               <Lateral001 content={help.help_1202} />
+            </div>
+            <div id="lateral_stage_99" className="stages">
+              <Lateral007 />
             </div>
           </div>
         </div>

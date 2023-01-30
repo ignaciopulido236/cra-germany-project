@@ -14,7 +14,7 @@ const CreateRecord = () => {
       const data = await res;
       console.log(data.message)
       if (data.message === "Post Success") {
-        navigate("/gesellschaftsvertrag-ug/" + data.id);
+        navigate("/werkstudentenvertrag/" + data.id);
       } 
     } catch (error) {
       navigate("/")

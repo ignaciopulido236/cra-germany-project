@@ -23,6 +23,7 @@ const Funnel0010SelectAndNumber = (props) => {
     setDocument,
     go_to_form,
     handleInputChange,
+    token_param
   } = useContext(StageContext);
 
   const [select, setSelect] = React.useState(props.question_value_1);
@@ -31,8 +32,9 @@ const Funnel0010SelectAndNumber = (props) => {
     e.preventDefault();
     const step = e.currentTarget.getAttribute("step");
     go_to_form(e, step);
+    await CompanyServer.updateCompany(token_param, doc);
 
-    //   // await CompanyServer.updateCompany(params.id, doc);
+    //   // 
     //   //
     // };
     // const handleInputChange = (e) => {
@@ -46,13 +48,13 @@ const Funnel0010SelectAndNumber = (props) => {
   return (
     <div className="container-fluid">
       <form
-        id="form-v0010"
+        id="form-v1"
         onSubmit={handleSubmit}
         className="row offset-md-1 col-md-10"
         step={props.next}
       >
         <GoBackButton step={props.previous} />
-        <Title_002 size={props.fontsize} content={props.question} />
+        <Title_001 size={props.size} headline={props.headline} question={props.question} />
         <div className="container-fluid">
           <div className="form-outline">
             <select

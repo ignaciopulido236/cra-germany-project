@@ -13,6 +13,7 @@ import Title_001 from "./Title_001";
 import GoNext from "../components/GoNext";
 import GoBackButton from "../components/GoBackButton";
 import Title_002 from "./Title_002";
+import { Title_003 } from "./Title_001";
 
 const Funnel0008 = (props) => {
   const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
@@ -50,7 +51,7 @@ const Funnel0008 = (props) => {
     <div className="container-fluid" >
       <form id="form-v1" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" step={props.next}>
         <GoBackButton step={props.previous} />
-        <Title_001 size={props.size} headline={props.headline} question={props.question} />
+        <Title_003 headline_size="30px" size={props.size} headline={props.headline} question={props.question} />
         <div className="container-fluid p-4">
 
           <div>

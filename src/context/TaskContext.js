@@ -53,7 +53,7 @@ export function StageContextProvider(props) {
   const handleSubmit = async (e,step) => {
    e.preventDefault();
   
-    //   // await CompanyServer.updateCompany(params.id, doc);
+   await CompanyServer.updateCompany(token_param, doc);
     //   //
     // };
     // const handleInputChange = (e) => {
