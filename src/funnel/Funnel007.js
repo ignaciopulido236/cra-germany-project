@@ -20,7 +20,7 @@ const Funnel001 = (props) => {
     linkid,
   } = useContext(StageContext);
 
-  const link = "http://localhost:3000/gesellschaftsvertrag-ug/" + token_param;
+  const link = "https://moonlit-sunburst-e23810.netlify.app/gesellschaftsvertrag-ug/" + token_param;
 
   const handleClick = async () => {
     try {
