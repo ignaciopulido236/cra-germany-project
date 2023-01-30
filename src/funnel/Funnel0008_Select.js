@@ -16,7 +16,7 @@ import Title_002 from "./Title_002";
 import { Alert } from "bootstrap";
 
 const Funnel00081 = (props) => {
-  const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
+  const {token_param, globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
 
   const params = useParams();
 
@@ -40,7 +40,11 @@ const Funnel00081 = (props) => {
     }else if(selectedValue=="False"){
       const step = e.currentTarget.getAttribute('step');
       go_to_form(e, step)
-    }  
+    
+
+    } 
+    await CompanyServer.updateCompany(token_param, doc);
+
   };
 
 

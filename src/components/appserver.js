@@ -45,7 +45,7 @@ export const updateCompany = async (token, updatedCompany) => {
             OrtArbeitgeber: String(updatedCompany.OrtArbeitgeber).trim(),
             boolean_q6: String(updatedCompany.boolean_q6).trim(),
             ArbeitszeitTage: String(updatedCompany.ArbeitszeitTage).trim(),
-            boolean_q8: String(updatedCompany.boolean_q8).trim(),
+            boolean_q8: (updatedCompany.boolean_q8),
             boolean_q10: String(updatedCompany.boolean_q10).trim(),
             BezahlungMonat: String(updatedCompany.BezahlungMonat).trim(),
             BrottoGehalt_String:String(updatedCompany.BrottoGehalt_String).trim(),

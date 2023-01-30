@@ -16,7 +16,7 @@ import Title_002 from "./Title_002";
 import { Title_003 } from "./Title_001";
 
 const Funnel0008 = (props) => {
-  const { globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
+  const { token_param,globalState, setGlobalState, getCompany, doc, setDocument, go_to_form } = useContext(StageContext);
 
 
   const [radioButton, setRadioButton] = React.useState(props.question_value ? "true" : "false");
@@ -36,9 +36,13 @@ const Funnel0008 = (props) => {
     setRadioButton(props.question_value ? "true" : "false")
   }, [props.question_value]);
   const handleSubmit = async (e) => {
+  
+
     e.preventDefault();
     const step = e.currentTarget.getAttribute('step')
     go_to_form(e, step)
+    await CompanyServer.updateCompany(token_param, doc);
+
 
 
   };
@@ -56,13 +60,13 @@ const Funnel0008 = (props) => {
 
           <div>
             <div className="form-check p-2">
-              <input value='true' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={radioButton === 'true'} onChange={handleRadioButtonChange} />
+              <input value='true' className="form-check-input" type="radio" name="flexRadioDefault" id={props.question_id} checked={radioButton === 'true'} onChange={handleRadioButtonChange} />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Yes
               </label>
             </div>
             <div className="form-check p-2">
-              <input value='false' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked={radioButton === 'false'} onChange={handleRadioButtonChange} />
+              <input value='false' className="form-check-input" type="radio" name="flexRadioDefault" id={props.question_id} checked={radioButton === 'false'} onChange={handleRadioButtonChange} />
               <label className="form-check-label" htmlFor="flexRadioDefault2">
                 No
               </label>
