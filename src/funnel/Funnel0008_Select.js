@@ -35,7 +35,8 @@ const Funnel00081 = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();    
     if (selectedValue=="True"){
-      go_to_form(e, 1401)
+      const step_yes = e.currentTarget.getAttribute('step_yes');
+      go_to_form(e, step_yes)
     }else if(selectedValue=="False"){
       const step = e.currentTarget.getAttribute('step');
       go_to_form(e, step)
@@ -47,7 +48,7 @@ const Funnel00081 = (props) => {
 
   return (
     <div className="container-fluid" >
-      <form id="form-v0010" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" step={props.next}>
+      <form id="form-v0010" onSubmit={handleSubmit} className="row offset-md-1 col-md-10" step={props.next} step_yes={props.next_yes}>
         <GoBackButton step={props.previous} />
         <Title_002 size={props.fontsize} content={props.question} description={props.description} />
         <div className="container-fluid p-4">
