@@ -1,6 +1,6 @@
-const API_URL = "http://127.0.0.1:8000/api/documents/";
+//const API_URL = "http://127.0.0.1:8000/api/documents/";
 const API_URL_W = "http://127.0.0.1:8000/api/send-webhook";
-// const API_URL = "https://germanyproject-production.up.railway.app/api/documents/";
+const API_URL = "https://germanyproject-production.up.railway.app/api/documents/";
 // const API_URL_W = "https://germanyproject-production.up.railway.app/api/send-webhook";
 
 export const listCompanies = async () => {
@@ -117,7 +117,7 @@ export const deleteCompany = async (companyId) => {
 export const generate_document = async (document_token) => {
    /* alert("Requesting Document")*/
 
-    return await fetch('http://127.0.0.1:8000/api/send-webhook/' + document_token, {
+    return await fetch('https://germanyproject-production.up.railway.app/api/send-webhook/' + document_token, {
         method: "get",
         headers: {
             "Content-Type": "application/json"
