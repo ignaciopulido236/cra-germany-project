@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.6f5b0270.css",
-    "main.js": "./static/js/main.30a401e6.js",
+    "main.css": "./static/css/main.9465ce41.css",
+    "main.js": "./static/js/main.015bbf40.js",
     "static/js/787.bbcf4af9.chunk.js": "./static/js/787.bbcf4af9.chunk.js",
     "static/media/recording_2021_11_21_at_15_22_3.png": "./static/media/recording_2021_11_21_at_15_22_3.64a0feca1b0f53d18a4e.png",
     "static/media/recording_2022_07_15_at_21_32_1.png": "./static/media/recording_2022_07_15_at_21_32_1.f9786fcde99c5e52a4cd.png",
@@ -14,17 +14,16 @@
     "static/media/batch_b_3.png": "./static/media/batch_b_3.de3be654a074506cf5cf.png",
     "static/media/tick_1.png": "./static/media/tick_1.d90c940c411369f8a29d.png",
     "static/media/tick_2.png": "./static/media/tick_2.d90c940c411369f8a29d.png",
-    "static/media/help_1.png": "./static/media/help_1.deda7a2a8320d041f9e4.png",
     "static/media/phone.png": "./static/media/phone.e941c03e59cac2f766f9.png",
     "static/media/phone_receiver__1_.png": "./static/media/phone_receiver__1_.e941c03e59cac2f766f9.png",
     "static/media/Group_48.png": "./static/media/Group_48.66f54093d612d66ec1d8.png",
     "index.html": "./index.html",
-    "main.6f5b0270.css.map": "./static/css/main.6f5b0270.css.map",
-    "main.30a401e6.js.map": "./static/js/main.30a401e6.js.map",
+    "main.9465ce41.css.map": "./static/css/main.9465ce41.css.map",
+    "main.015bbf40.js.map": "./static/js/main.015bbf40.js.map",
     "787.bbcf4af9.chunk.js.map": "./static/js/787.bbcf4af9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f5b0270.css",
-    "static/js/main.30a401e6.js"
+    "static/css/main.9465ce41.css",
+    "static/js/main.015bbf40.js"
   ]
 }
